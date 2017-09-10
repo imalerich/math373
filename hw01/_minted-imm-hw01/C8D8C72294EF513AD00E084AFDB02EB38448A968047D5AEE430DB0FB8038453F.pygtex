@@ -1,0 +1,55 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function} \PYG{n+nf}{p4}
+
+\PYG{n}{clear} \PYG{n+nb}{all}\PYG{p}{;}
+\PYG{n+nb}{close} \PYG{n+nb}{all}\PYG{p}{;}
+\PYG{n+nb}{hold} \PYG{n}{on}\PYG{p}{;}
+
+\PYG{c}{\PYGZpc{} This is the function we want to find 0\PYGZsq{}s for.}
+\PYG{n}{f} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{p}{(}\PYG{l+m+mi}{4} \PYG{o}{*} \PYG{n}{t}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n+nb}{e}\PYG{o}{.\PYGZca{}}\PYG{n}{t} \PYG{o}{\PYGZhy{}} \PYG{n+nb}{e}\PYG{o}{.\PYGZca{}}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{p}{);}
+\PYG{n}{df} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{p}{(}\PYG{l+m+mi}{8} \PYG{o}{*} \PYG{n}{t}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n+nb}{e}\PYG{o}{.\PYGZca{}}\PYG{n}{t} \PYG{o}{+} \PYG{n+nb}{e}\PYG{o}{.\PYGZca{}}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{t}\PYG{p}{);}
+\PYG{c}{\PYGZpc{} Iterate via Newton\PYGZsq{}s method until we are within \PYGZsq{}err\PYGZsq{} of 0.}
+\PYG{n}{ERR} \PYG{p}{=} \PYG{l+m+mi}{10}\PYGZca{}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{);}
+\PYG{c}{\PYGZpc{} List of starting points to use with Newton\PYGZsq{}s method.}
+\PYG{c}{\PYGZpc{} Change the order so they show up better when I plot the results.}
+\PYG{n}{\PYGZus{}y0} \PYG{p}{=} \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{];}
+\PYG{c}{\PYGZpc{} Here\PYGZsq{}s some colors for plotting to help make things clear}
+\PYG{n}{COL} \PYG{p}{=} \PYG{p}{[}
+	\PYG{p}{[}\PYG{l+m+mi}{243} \PYG{l+m+mi}{54} \PYG{l+m+mi}{51}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}\PYG{p}{,}
+	\PYG{p}{[}\PYG{l+m+mi}{234} \PYG{l+m+mi}{78} \PYG{l+m+mi}{92}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}\PYG{p}{,}
+	\PYG{p}{[}\PYG{l+m+mi}{155} \PYG{l+m+mi}{234} \PYG{l+m+mi}{51}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}\PYG{p}{,}
+	\PYG{p}{[}\PYG{l+m+mi}{51} \PYG{l+m+mi}{234} \PYG{l+m+mi}{118}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}\PYG{p}{,}
+	\PYG{p}{[}\PYG{l+m+mi}{51} \PYG{l+m+mi}{234} \PYG{l+m+mi}{222}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}\PYG{p}{,}
+	\PYG{p}{[}\PYG{l+m+mi}{51} \PYG{l+m+mi}{88} \PYG{l+m+mi}{234}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}\PYG{p}{,}
+	\PYG{p}{[}\PYG{l+m+mi}{130} \PYG{l+m+mi}{51} \PYG{l+m+mi}{234}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}\PYG{p}{,}
+	\PYG{p}{[}\PYG{l+m+mi}{234} \PYG{l+m+mi}{51} \PYG{l+m+mi}{152}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}
+\PYG{p}{]}
+
+\PYG{c}{\PYGZpc{} Loop through each starting point to run Newton\PYGZsq{}s method.}
+\PYG{k}{for} \PYG{n}{y0} \PYG{p}{=} \PYG{n}{\PYGZus{}y0}
+
+	\PYG{c}{\PYGZpc{} Steps will contain a list of each point in the iteration.}
+	\PYG{c}{\PYGZpc{} We can plot this, as well as examine it\PYGZsq{}s size to see}
+	\PYG{c}{\PYGZpc{} how well each initial point is performing.}
+	\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{y0}\PYG{p}{];}
+	
+	\PYG{c}{\PYGZpc{} loop while we still have too much error}
+	\PYG{c}{\PYGZpc{} infinite loop if we don\PYGZsq{}t converge... but we do}
+	\PYG{c}{\PYGZpc{} for these y, so it\PYGZsq{}s cool}
+	\PYG{k}{while} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{)))} \PYG{o}{\PYGZgt{}} \PYG{n}{ERR}
+		\PYG{n}{tmp} \PYG{p}{=} \PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{);}
+		\PYG{n}{nxt} \PYG{p}{=} \PYG{n}{tmp} \PYG{o}{\PYGZhy{}} \PYG{n}{f}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{)}\PYG{o}{/}\PYG{n}{df}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{);}
+		\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{steps} \PYG{n}{nxt}\PYG{p}{];}
+	\PYG{k}{end}
+
+	\PYG{n}{y0}
+	\PYG{n}{steps}
+	\PYG{n+nb}{plot}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{),} \PYG{l+s}{\PYGZsq{}LineWidth\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}Color\PYGZsq{}}\PYG{p}{,} \PYG{n}{COL}\PYG{p}{(}\PYG{k}{end}\PYG{p}{,} \PYG{p}{:),} \PYG{l+s}{\PYGZsq{}DisplayName\PYGZsq{}}\PYG{p}{,} \PYG{n}{int2str}\PYG{p}{(}\PYG{n}{y0}\PYG{p}{));}
+	\PYG{n}{COL} \PYG{p}{=} \PYG{n}{COL}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{k}{end}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{p}{:);}
+
+\PYG{k}{end}
+
+\PYG{n+nb}{legend}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}show\PYGZsq{}}\PYG{p}{);}
+
+\PYG{k}{end}
+\end{Verbatim}

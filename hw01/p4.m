@@ -10,7 +10,19 @@ df = @(t) (8 * t) - e.^t + e.^(-t);
 % Iterate via Newton's method until we are within 'err' of 0.
 ERR = 10^-(5);
 % List of starting points to use with Newton's method.
-_y0 = [-10, -5, -3, -1, 1, 3, 5, 10];
+% Change the order so they show up better when I plot the results.
+_y0 = [-10, 10, -5, 5, -3, 3, -1, 1];
+% Here's some colors for plotting to help make things clear
+COL = [
+	[243 54 51] ./ 255,
+	[234 78 92] ./ 255,
+	[155 234 51] ./ 255,
+	[51 234 118] ./ 255,
+	[51 234 222] ./ 255,
+	[51 88 234] ./ 255,
+	[130 51 234] ./ 255,
+	[234 51 152] ./ 255
+]
 
 % Loop through each starting point to run Newton's method.
 for y0 = _y0
@@ -21,6 +33,8 @@ for y0 = _y0
 	steps = [y0];
 	
 	% loop while we still have too much error
+	% infinite loop if we don't converge... but we do
+	% for these y, so it's cool
 	while abs(f(steps(end))) > ERR
 		tmp = steps(end);
 		nxt = tmp - f(tmp)/df(tmp);
@@ -28,9 +42,12 @@ for y0 = _y0
 	end
 
 	y0
-	size(steps)
-	plot(steps, f(steps), 'LineWidth', 3);
+	steps
+	plot(steps, f(steps), 'LineWidth', 3, 'Color', COL(end, :), 'DisplayName', int2str(y0));
+	COL = COL(1:end-1, :);
 
 end
+
+legend('show');
 
 end

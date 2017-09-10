@@ -14,8 +14,8 @@
 	\begin{enumerate}
 		\item Show that $x-(\ln x)^x = 0$ has at least one solution on $[4,5]$.
 		\item Use the Intermediate Value Theorem and Rolle's Theorem to show that the graph
-			of $f(x) = x^3 + 2x + k$ crosses the x-axis exactly once, regardless of the value of the
-			constant k.
+			of $f(x) = x^3 + 2x + k$ crosses the x-axis exactly once, 
+			regardless of the value of the constant k.
 	\end{enumerate}
 
 \solution
@@ -141,7 +141,17 @@
 
 \solution
 
+	Here is the code I am using to run newton's method
 	\inputminted{octave}{p4.m}
+	Below I have formatted the text output from that code, we can immediately see
+	some symmetry about the axis $x=0$. Using the initial $y_0$ values, I found
+	a total of 4 zeros at $x=\{\pm4.3062, \pm0.82450\}$.
+	The closer I start to the guess, the faster (less steps) Newton's method will
+	converge to the result. Interestingly, $x=\pm3$ overshoot the zero on their side
+	of the axis $x=0$, that is $+3\text{ finds }-0.82450$ and $-3\text{ finds }+0.82450$.
+	All others initial values find the zero nearest to them.
+
+	\inputminted{text}{p4.results}
 
 %% Problem 5
 \problem{}

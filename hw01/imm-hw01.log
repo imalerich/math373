@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.26)  9 SEP 2017 16:52
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.30)  10 SEP 2017 14:14
 entering extended mode
  \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **imm-hw01.tex
 (./imm-hw01.tex
@@ -544,10 +543,10 @@ LaTeX Info: Redefining \genfrac on input line 145.
 \cur@row=\count286
 \cur@col=\count287
 \conditionsep=\skip73
-) (/usr/share/texmf/tex/latex/minted/minted.sty
-Package: minted 2016/10/31 v2.4.1 Yet another Pygments shim for LaTeX
-(/usr/share/texmf/tex/latex/fvextra/fvextra.sty
-Package: fvextra 2016/09/02 v1.2.1 fvextra - extensions and patches for fancyvr
+) (/usr/share/texmf-dist/tex/latex/minted/minted.sty
+Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
+(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2017/07/08 v1.3.1 fvextra - extensions and patches for fancyvr
 b
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
@@ -594,21 +593,21 @@ LaTeX Info: Redefining \\ on input line 3056.
 \FV@TmpLength=\skip74
 \c@FV@HighlightLinesStart=\count301
 \c@FV@HighlightLinesStop=\count302
+\FV@LoopCount=\count303
+\FV@NCharsBox=\box55
 \FV@BreakIndent=\dimen260
+\FV@BreakIndentNChars=\count304
 \FV@BreakSymbolSepLeft=\dimen261
+\FV@BreakSymbolSepLeftNChars=\count305
 \FV@BreakSymbolSepRight=\dimen262
+\FV@BreakSymbolSepRightNChars=\count306
 \FV@BreakSymbolIndentLeft=\dimen263
+\FV@BreakSymbolIndentLeftNChars=\count307
 \FV@BreakSymbolIndentRight=\dimen264
-\c@FancyVerbLineBreakLast=\count303
-\FV@LineBox=\box55
-\FV@LineIndentBox=\box56
-) (/usr/share/texmf-dist/tex/latex/float/float.sty
-Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count304
-\float@exts=\toks25
-\float@box=\box57
-\@float@everytoks=\toks26
-\@floatcapt=\box58
+\FV@BreakSymbolIndentRightNChars=\count308
+\c@FancyVerbLineBreakLast=\count309
+\FV@LineBox=\box56
+\FV@LineIndentBox=\box57
 ) (/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 67.
@@ -625,8 +624,8 @@ runsystem(rm -- "imm-hw01.w18")...executed.
 ) (/usr/share/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texmf-dist
 /tex/generic/xstring/xstring.tex
 \@xs@message=\write4
-\integerpart=\count305
-\decimalpart=\count306
+\integerpart=\count310
+\decimalpart=\count311
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 ) (/usr/share/texmf-dist/tex/latex/framed/framed.sty
@@ -636,14 +635,21 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \fb@frh=\dimen266
 \FrameRule=\dimen267
 \FrameSep=\dimen268
+) (/usr/share/texmf-dist/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count312
+\float@exts=\toks25
+\float@box=\box58
+\@float@everytoks=\toks26
+\@floatcapt=\box59
 )
 \minted@appexistsfile=\read2
-\minted@bgbox=\box59
+\minted@bgbox=\box60
 \minted@code=\write5
-\c@minted@FancyVerbLineTemp=\count307
-\c@minted@pygmentizecounter=\count308
+\c@minted@FancyVerbLineTemp=\count313
+\c@minted@pygmentizecounter=\count314
 \@float@every@listing=\toks27
-\c@listing=\count309
+\c@listing=\count315
 )
 runsystem(mkdir -p _minted-imm-hw01)...executed.
 
@@ -662,21 +668,21 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen274
 \caption@hangindent=\dimen275
 )
-\c@ContinuedFloat=\count310
+\c@ContinuedFloat=\count316
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
-\c@KVtest=\count311
+\c@KVtest=\count317
 \sf@farskip=\skip76
 \sf@captopadj=\dimen276
 \sf@capskip=\skip77
 \sf@nearskip=\skip78
-\c@subfigure=\count312
-\c@subfigure@save=\count313
-\c@lofdepth=\count314
-\c@subtable=\count315
-\c@subtable@save=\count316
-\c@lotdepth=\count317
+\c@subfigure=\count318
+\c@subfigure@save=\count319
+\c@lofdepth=\count320
+\c@subtable=\count321
+\c@subtable@save=\count322
+\c@lotdepth=\count323
 \sf@top=\skip79
 \sf@bottom=\skip80
 ) (/usr/share/texmf-dist/tex/latex/koma-script/scrextend.sty
@@ -774,16 +780,16 @@ LaTeX Font Info:    ... okay on input line 8.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count318
+\scratchcounter=\count324
 \scratchdimen=\dimen277
-\scratchbox=\box60
-\nofMPsegments=\count319
-\nofMParguments=\count320
+\scratchbox=\box61
+\nofMPsegments=\count325
+\nofMParguments=\count326
 \everyMPshowfont=\toks28
-\MPscratchCnt=\count321
+\MPscratchCnt=\count327
 \MPscratchDim=\dimen278
-\MPnumerator=\count322
-\makeMPintoPDFobject=\count323
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
 \everyMPtoPDFconversion=\toks29
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -800,14 +806,14 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box61
+\AtBeginShipoutBox=\box62
 Package hyperref Info: Link coloring OFF on input line 8.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count324
+\c@section@level=\count330
 )
 LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
@@ -828,7 +834,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 
-./imm-hw01.tex:25: LaTeX Error: Environment proof undefined.
+! LaTeX Error: Environment proof undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -841,7 +847,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./imm-hw01.tex:30: LaTeX Error: \begin{document} ended by \end{proof}.
+! LaTeX Error: \begin{document} ended by \end{proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -854,7 +860,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./imm-hw01.tex:34: LaTeX Error: Environment proof undefined.
+! LaTeX Error: Environment proof undefined.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -867,7 +873,7 @@ Type  I <command> <return>  to replace it with another command,
 or  <return>  to continue without it.
 
 
-./imm-hw01.tex:36: LaTeX Error: \begin{document} ended by \end{proof}.
+! LaTeX Error: \begin{document} ended by \end{proof}.
 
 See the LaTeX manual or LaTeX Companion for explanation.
 Type  H <return>  for immediate help.
@@ -882,7 +888,7 @@ or  <return>  to continue without it.
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
-./imm-hw01.tex:117: Double superscript.
+! Double superscript.
 <recently read> ^
                  
 l.117 ...)$. As $e^x$ is non-decreasing, and $e^x'
@@ -892,47 +898,55 @@ I treat `x^1^2' essentially like `x^1{}^2'.
 [3] (./_minted-imm-hw01/default-pyg-prefix.pygstyle) (./_minted-imm-hw01/friend
 ly.pygstyle)
 runsystem(pygmentize -l octave -f latex -P commandprefix=PYG -F tokenmerge -o _
-minted-imm-hw01/B3C341BBBB2B3F3AA82CABB54577564F8448A968047D5AEE430DB0FB8038453
+minted-imm-hw01/C8D8C72294EF513AD00E084AFDB02EB38448A968047D5AEE430DB0FB8038453
 F.pygtex p4.m)...executed.
 
 
-(./_minted-imm-hw01/B3C341BBBB2B3F3AA82CABB54577564F8448A968047D5AEE430DB0FB803
+(./_minted-imm-hw01/C8D8C72294EF513AD00E084AFDB02EB38448A968047D5AEE430DB0FB803
 8453F.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
-) [4] [5] [6]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 194.
-[7]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 194.
+[4])
+(./_minted-imm-hw01/1628D6DDE87DB5094183A54707FAA990C1AA0BE507555BF9EE7DA896092
+928A6.pygtex) [5] [6] [7]
+runsystem(rm _minted-imm-hw01/AAAF9D47A70CB87CECE78CE0709B395D8448A968047D5AEE4
+30DB0FB8038453F.pygtex)...executed.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
+[8]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
 (./imm-hw01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 194.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 194.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
 Package rerunfilecheck Info: File `imm-hw01.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 194.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
  ) 
 Here is how much of TeX's memory you used:
- 20787 strings out of 492990
- 367253 string characters out of 6138688
- 511090 words of memory out of 5000000
- 24100 multiletter control sequences out of 15000+600000
+ 20873 strings out of 492990
+ 370641 string characters out of 6138688
+ 516193 words of memory out of 5000000
+ 24182 multiletter control sequences out of 15000+600000
  536166 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,11n,45p,10414b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
-</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
-texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
-ts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texmf-dist/fonts/type1/publ
-ic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
-/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></us
-r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-di
-st/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/p
-ublic/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts
-/cm/cmsy6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
-/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb>
-Output written on imm-hw01.pdf (7 pages, 130353 bytes).
+ 46i,11n,45p,10414b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
+ </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmitt10.720pk>
+ </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </
+home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.720pk> </usr
+/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/imalerich/.t
+exlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy6.600pk> </home/imalerich/.texli
+ve/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/imalerich/.texlive/t
+exmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </usr/share/texmf-dist/fonts/p
+k/ljfour/public/cm/dpi600/cmr8.pk> </home/imalerich/.texlive/texmf-var/fonts/pk
+/ljfour/public/cm/cmmi8.600pk> </home/imalerich/.texlive/texmf-var/fonts/pk/ljf
+our/public/cm/cmsy10.720pk> </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour
+/public/cm/cmmi12.600pk> </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/pu
+blic/cm/cmbx12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/c
+mr12.pk>
+Output written on imm-hw01.pdf (8 pages, 91903 bytes).
 PDF statistics:
- 129 PDF objects out of 1000 (max. 8388607)
- 106 compressed objects within 2 object streams
- 40 named destinations out of 1000 (max. 500000)
+ 395 PDF objects out of 1000 (max. 8388607)
+ 125 compressed objects within 2 object streams
+ 41 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
