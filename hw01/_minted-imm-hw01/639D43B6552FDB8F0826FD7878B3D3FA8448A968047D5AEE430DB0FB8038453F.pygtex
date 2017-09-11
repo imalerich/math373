@@ -13,7 +13,7 @@
 \PYG{c}{\PYGZpc{} List of starting points to use with Newton\PYGZsq{}s method.}
 \PYG{c}{\PYGZpc{} Change the order so they show up better when I plot the results.}
 \PYG{n}{\PYGZus{}y0} \PYG{p}{=} \PYG{p}{[}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{10}\PYG{p}{,} \PYG{l+m+mi}{10}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{5}\PYG{p}{,} \PYG{l+m+mi}{5}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{,} \PYG{l+m+mi}{1}\PYG{p}{];}
-\PYG{c}{\PYGZpc{} Here\PYGZsq{}s some colors for plotting to help make things clear}
+\PYG{c}{\PYGZpc{} Use these colors for plotting Newton\PYGZsq{}s method for each \PYGZus{}y0.}
 \PYG{n}{COL} \PYG{p}{=} \PYG{p}{[}
 	\PYG{p}{[}\PYG{l+m+mi}{243} \PYG{l+m+mi}{54} \PYG{l+m+mi}{51}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}\PYG{p}{,}
 	\PYG{p}{[}\PYG{l+m+mi}{234} \PYG{l+m+mi}{78} \PYG{l+m+mi}{92}\PYG{p}{]} \PYG{o}{./} \PYG{l+m+mi}{255}\PYG{p}{,}

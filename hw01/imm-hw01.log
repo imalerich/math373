@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.30)  10 SEP 2017 14:14
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.30)  10 SEP 2017 14:24
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -897,36 +897,35 @@ I treat `x^1^2' essentially like `x^1{}^2'.
 
 [3] (./_minted-imm-hw01/default-pyg-prefix.pygstyle) (./_minted-imm-hw01/friend
 ly.pygstyle)
-runsystem(pygmentize -l octave -f latex -P commandprefix=PYG -F tokenmerge -o _
-minted-imm-hw01/C8D8C72294EF513AD00E084AFDB02EB38448A968047D5AEE430DB0FB8038453
-F.pygtex p4.m)...executed.
-
-
-(./_minted-imm-hw01/C8D8C72294EF513AD00E084AFDB02EB38448A968047D5AEE430DB0FB803
+(./_minted-imm-hw01/639D43B6552FDB8F0826FD7878B3D3FA8448A968047D5AEE430DB0FB803
 8453F.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
 [4])
 (./_minted-imm-hw01/1628D6DDE87DB5094183A54707FAA990C1AA0BE507555BF9EE7DA896092
-928A6.pygtex) [5] [6] [7]
-runsystem(rm _minted-imm-hw01/AAAF9D47A70CB87CECE78CE0709B395D8448A968047D5AEE4
-30DB0FB8038453F.pygtex)...executed.
-
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 204.
-[8]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 204.
+928A6.pygtex)
+<p4.png, id=56, 578.16pt x 433.62pt>
+File: p4.png Graphic file (type png)
+<use p4.png>
+Package pdftex.def Info: p4.png  used on input line 157. on input line 157.
+Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
+ 157.
+[5] [6 <./p4.png (PNG copy)>] [7] [8]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
+[9]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
 (./imm-hw01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 204.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 204.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
 Package rerunfilecheck Info: File `imm-hw01.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 204.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
  ) 
 Here is how much of TeX's memory you used:
- 20873 strings out of 492990
- 370641 string characters out of 6138688
+ 20879 strings out of 492990
+ 370636 string characters out of 6138688
  516193 words of memory out of 5000000
- 24182 multiletter control sequences out of 15000+600000
+ 24186 multiletter control sequences out of 15000+600000
  536166 words of font info for 45 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,11n,45p,10414b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
@@ -943,10 +942,10 @@ our/public/cm/cmsy10.720pk> </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour
 /public/cm/cmmi12.600pk> </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/pu
 blic/cm/cmbx12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/c
 mr12.pk>
-Output written on imm-hw01.pdf (8 pages, 91903 bytes).
+Output written on imm-hw01.pdf (9 pages, 107851 bytes).
 PDF statistics:
- 395 PDF objects out of 1000 (max. 8388607)
- 125 compressed objects within 2 object streams
- 41 named destinations out of 1000 (max. 500000)
- 1 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 400 PDF objects out of 1000 (max. 8388607)
+ 128 compressed objects within 2 object streams
+ 42 named destinations out of 1000 (max. 500000)
+ 6 words of extra memory for PDF output out of 10000 (max. 10000000)
 

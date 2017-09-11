@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1505070879 "imm-hw01.tex" "imm-hw01.pdf" "imm-hw01" 1505070879
+["pdflatex"] 1505071491 "imm-hw01.tex" "imm-hw01.pdf" "imm-hw01" 1505071491
   "/dev/null" 1505055789 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk" 1504148743 14156 58a31b2a95aceb4dcfbf914e055895dd ""
   "/home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.720pk" 1504148744 17912 c995a8e8e791e222dc320e1f4a0a00a6 ""
@@ -116,16 +116,16 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1504143252 21233 86a8356fda6de65361ca80c11aac99e1 ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1504143230 7735972 bcc6eabf5510b8c689b80250643af97b ""
   "_minted-imm-hw01/1628D6DDE87DB5094183A54707FAA990C1AA0BE507555BF9EE7DA896092928A6.pygtex" 1505070104 939 8669b3aecc7cf35a01875bc5ab1f3e68 ""
-  "_minted-imm-hw01/AAAF9D47A70CB87CECE78CE0709B395D8448A968047D5AEE430DB0FB8038453F.pygtex" 1505070833 4291 016211cb5311d0137c6e553975afea21 ""
-  "_minted-imm-hw01/C8D8C72294EF513AD00E084AFDB02EB38448A968047D5AEE430DB0FB8038453F.pygtex" 1505070880 4318 970dc1e729b4baae0da40ba7bcd0579b ""
+  "_minted-imm-hw01/639D43B6552FDB8F0826FD7878B3D3FA8448A968047D5AEE430DB0FB8038453F.pygtex" 1505071153 4328 c8a7672210d40610d634ee7827af832a ""
   "_minted-imm-hw01/default-pyg-prefix.pygstyle" 1505064628 7889 3ce1fbc763e3e2c748310f4fe31722b6 ""
   "_minted-imm-hw01/friendly.pygstyle" 1505064628 9564 fc10deaea526932d30957625b7cbeeaf ""
   "imm-hw01.aex" 0 -1 0 ""
-  "imm-hw01.aux" 1505070833 928 18a95acd1fef9d394f8e30f81f8cd969 ""
-  "imm-hw01.out" 1505070832 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "imm-hw01.tex" 1505070035 7079 d7e25caa01e94159d88af5675396b0f4 ""
+  "imm-hw01.aux" 1505071483 928 ed3c4307bb20de141bb87f209dd87b7a ""
+  "imm-hw01.out" 1505071483 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "imm-hw01.tex" 1505071490 7220 4449513e4f94c6fdf32d962b54189cfb ""
   "imm-hw01.w18" 0 -1 0 ""
-  "p4.m" 1505070877 1287 c8d8c72294ef513ad00e084afdb02eb3 ""
+  "p4.m" 1505071153 1289 639d43b6552fdb8f0826fd7878b3d3fa ""
+  "p4.png" 1505071409 15509 13882529f6c05da28355ae5ebc8fc4cb ""
   "p4.results" 1505070101 583 1628d6dde87db5094183a54707faa990 ""
   (generated)
   "imm-hw01.pdf"

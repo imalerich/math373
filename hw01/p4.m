@@ -12,7 +12,7 @@ ERR = 10^-(5);
 % List of starting points to use with Newton's method.
 % Change the order so they show up better when I plot the results.
 _y0 = [-10, 10, -5, 5, -3, 3, -1, 1];
-% Here's some colors for plotting to help make things clear
+% Use these colors for plotting Newton's method for each _y0.
 COL = [
 	[243 54 51] ./ 255,
 	[234 78 92] ./ 255,
