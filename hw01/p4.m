@@ -1,10 +1,9 @@
 function p4
-
 clear all;
 close all;
 hold on;
 
-% This is the function we want to find 0's for.
+% The function to find 0's for...
 f = @(t) (4 * t.^2) - e.^t - e.^(-t);
 df = @(t) (8 * t) - e.^t + e.^(-t);
 % Iterate via Newton's method until we are within 'err' of 0.
@@ -43,11 +42,11 @@ for y0 = _y0
 
 	y0
 	steps
-	plot(steps, f(steps), 'LineWidth', 3, 'Color', COL(end, :), 'DisplayName', int2str(y0));
+	plot(steps, f(steps), 'LineWidth', 3, 'Color', COL(end, :), 
+		'DisplayName', int2str(y0));
 	COL = COL(1:end-1, :);
 
 end
 
 legend('show');
-
 end

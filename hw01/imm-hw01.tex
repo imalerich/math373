@@ -1,8 +1,8 @@
 \documentclass[10pt]{jhwhw}
 \author{Ian Malerich}
 \title{Math S 373: Homework 1}
-\usepackage{amssymb, amsfonts, amsmath, mathtools, graphicx, breqn}
-\usepackage{minted, subfig, float, scrextend, setspace}
+\usepackage{amssymb, amsfonts, amsmath, mathtools, graphicx, breqn, soul}
+\usepackage{minted, subfig, float, scrextend, setspace, amsthm}
 \usemintedstyle{friendly}
 
 \begin{document}
@@ -23,16 +23,31 @@
 \part
 
 	\begin{proof}
-		Note that the function is continous, in particular, it is continous over $[4,5]$.
-		Further as we have that $f(4) = 4 - ln(4)^4 = 0.306638422$ and $f(5) = 5 - ln(5)^5 = -5.798691578$, and
-		$-5.79869 < 0 < 0.306638422$, then by the Intermediate Value Theorem, $\exists x\in[4,5] \text{ such that }
+		Note that the function is continuous, in particular, it is continuous over $[4,5]$.
+		Further as we have that 
+		$f(4) = 4 - ln(4)^4 = 0.306638422$ and $f(5) = 5 - ln(5)^5 = -5.798691578$, and
+		$-5.79869 < 0 < 0.306638422$, then by the Intermediate Value Theorem, 
+		$\exists x\in[4,5] \text{ such that }
 		f(x) = 0$.
 	\end{proof}
 
 \part
 
 	\begin{proof}
-		Proof goes here.
+		Note that as $f$ is a polynomial, thus it is continuous everywhere. In
+		particular, it is continuous on any interval $(i,j)$ where $i,j \in \mathbb{R}$.
+		\bigbreak
+		If $x < 0$ then $x^3 + 2x + k < 2x + k$ further, if $x < -\frac{k}{2}$ then 
+		$x^3 + 2x + k < 2x + k < 0$. \\ 
+		Choose $a \in \mathbb{R}$ such that $a < -\frac{k}{2}$.
+		\bigbreak
+		If $x > 0$ then $x^3 + 2x + k > 2x + k$ further, if $x > -\frac{k}{2}$ then
+		$x^3 + 2x + k > 2x + k > 0$. \\
+		Choose $b \in \mathbb{R}$ such that $b > -\frac{k}{2}$.
+		\bigbreak
+		We know that $f$ is continuous on $(a,b)$, we also know that $f(a) < 0 < f(b)$. \\
+		Thus, by the Intermediate Value Theorem, $\exists c\in(a,b) \text{ such that }
+		f(c) = 0$.
 	\end{proof}
 
 %% Problem 2
@@ -141,25 +156,30 @@
 
 \solution
 
-	Here is the code I am using to run newton's method
 	\inputminted{octave}{p4.m}
 	Below I have formatted the text output from that code, we can immediately see
 	some symmetry about the axis $x=0$. Using the initial $y_0$ values, I found
 	a total of 4 zeros at $x=\{\pm4.3062, \pm0.82450\}$.
 	The closer I start to the guess, the faster (less steps) Newton's method will
-	converge to the result. Interestingly, $x=\pm3$ overshoot the zero on their side
+	find a result. Interestingly, $x=\pm3$ overshoot the zero on their side
 	of the axis $x=0$, that is $+3\text{ finds }-0.82450$ and $-3\text{ finds }+0.82450$.
 	All others initial values find the zero nearest to them.
 
 	\inputminted{text}{p4.results}
 
+	\clearpage
 	And here is a graph to visualize what Newton's method is doing for each starting point.
-	{\centering \includegraphics[scale=0.75]{p4.png}}
+	Note there is some overlap for initial values of $\pm3$ as they approach
+	opposite zeros.
+	\begin{center}
+		\includegraphics[scale=0.8]{p4.png}
+	\end{center}
 
 %% Problem 5
 \problem{}
 
-	Use Newton's method and Modified Newton's method to find the solution accurate to within $10^-5$ for
+	Use Newton's method and Modified Newton's method to find the solution accurate to 
+	within $10^{-5}$ for
 	$$
 		1 - 4x\cos x + 2x^2 + \cos 2x = 0\text{, for }0 \leq x \leq 1.
 	$$
@@ -167,12 +187,27 @@
 
 \solution
 
-	TODO
+	\inputminted{octave}{p5.m}
+	Here are the results we get from running regular \hl{Newton's Method} to find the zero.
+	From the steps used to find the solution, we can see that Newton's method 
+	took \hl{9 steps} when using the midpoint to find the zero.
+	\inputminted{text}{p5.newtons}
+	And here are the results when we use \hl{Modified Newton's Method} to find the zero.
+	We can see that this method found a result much faster than regular Newton's Method, 
+	taking only \hl{5 steps} to find the (more accurate) solution.
+	\inputminted{text}{p5.modified}
+	In the graph below, we can clearly see Modified Newton's Method jumping straight away
+	from $0.5$ to $0.7$ in one step, something that regular Newton's Method took about 3 
+	steps.
+	\begin{center}
+		\includegraphics[scale=0.5]{p5.png}
+	\end{center}
 
 %% Problem 6
 \problem{}
 
-	Use each of the following methods to find a solution in $[0.1, 1]$ accurate to within $10^-4$ for
+	Use each of the following methods to find a solution in $[0.1, 1]$ 
+	accurate to within $10^-4$ for
 	$$
 		600x^4 - 550x^3 + 200x^2 - 20x - 1 = 0.
 	$$
@@ -185,13 +220,47 @@
 	Comment on the performance of these methods.
 
 \solution
+	
+	\inputminted{octave}{p6.m}
+	\bigbreak
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}\bigbreak
+	\bigbreak
 
-	TODO
+	The \hl{Bisection Method} is the slowest solution of these 4 methods, taking 
+	a total of \hl{15 steps} to find a solution. Further, this solution only barely
+	breaks the required error, indicative of the small jumps taken by this method.
+	\inputminted{text}{p6.bisection}
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}\bigbreak
+	
+	\hl{Newton's Method} is about twice as fast as the Bisection Method in this example,
+	converging in just \hl{6 steps}. Likely due to the simplicity of finding the zero
+	of a polynomial, with an initial guess that was relatively close to what we were looking
+	for, that is, more complex methods were likely not needed in this scenario.
+	\inputminted{text}{p6.newtons}
+
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}\bigbreak
+	The \hl{Secant Method} found a solution slightly slower than Newton's, taking
+	an additional step, for a total of \hl{7 steps}. This does however, include 
+	both of the initial guesses, one of which was derived from Newton's method.
+	\inputminted{text}{p6.secant}
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}\bigbreak
+
+	\clearpage
+	\hl{M\"uller's Method} found it's result in \hl{8 steps}, which included 3 initial
+	guesses, 2 of which were found using Newton's method. If these Initial guesses are 
+	excluded from the count, only 5 steps of iteration were actually needed. Which
+	would bring tie it with Newton's method. Regardless, this method was not necessarily
+	needed in finding the desired 0, although this function does have complex 0's,
+	we did not actually find one using these initial parameters.
+	\inputminted{text}{p6.muller}
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}\bigbreak
+
+	\begin{center}
+		\includegraphics[scale=0.75]{p6.png}
+	\end{center}
 
 %% Problem 7
 \problem{}
-
-\solution
 
 	An object falling vertically through the air is subjected to viscous resistance as well as the
 	force of gravity. Assume that an object with mass $m$ is dropped from a height $s_0$ and that the height of the
@@ -203,5 +272,34 @@
 	Suppose $s_0$=300ft, $m$ = 0.25lb, and $k$ = 0.1 lb-s/ft. Find to within 0.01s the time it takes
 	this quarter-pounder to hit the ground. Use Fixed-point iteration, Steffensen's method and Newton's method
 	to find the solution.
+
+\solution
+	\inputminted{octave}{p7.m}
+	\hl{Fixed-Point Iteration} was the slowest of the three methods I used, but thanks
+	to a decent initial guess, and a relatively large error, none of the methods took
+	particularly long to find a solution. In this case, only \hl{5 steps} were needed.
+	\inputminted{text}{p7.fixedpoint}
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}\bigbreak
+
+	\hl{Steffensen's Method} found a solution in only \hl{3 steps}, just as fast as 
+	Newton's method. However, Steffensen's method produced a notably much closer
+	result, and had much greater accuracy than the other two methods.
+	\inputminted{text}{p7.steffensens}
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}\bigbreak
+
+	Like Steffensen's Method, \hl{Newton's Method} found a solution in only
+	\hl{3 steps}, however as noted above the result was not as accurate as the one
+	found by Steffensen's Method, although the result was still better than
+	Fixed-Point Iteration. This may have to do with the fact that the solution was
+	found so quickly, and may not be indicative of long term behavior.
+	\inputminted{text}{p7.newtons}
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}\bigbreak
+	
+	In the graph below, we can see that although the number of steps varied,
+	the path took in all these methods was roughly the same, this again is likely due to
+	the initial guess being reasonably close to the desired solution.
+	\begin{center}
+		\includegraphics[scale=0.75]{p7.png}
+	\end{center}
 
 \end{document}

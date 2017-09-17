@@ -1,0 +1,53 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function} \PYG{n+nf}{p5}
+\PYG{n}{clear} \PYG{n+nb}{all}\PYG{p}{;}
+\PYG{n+nb}{close} \PYG{n+nb}{all}\PYG{p}{;}
+\PYG{n+nb}{hold} \PYG{n}{on}\PYG{p}{;}
+
+\PYG{c}{\PYGZpc{} The function to find 0\PYGZsq{}s for...}
+\PYG{n}{f} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{l+m+mi}{1} \PYG{o}{\PYGZhy{}} \PYG{l+m+mf}{4.}\PYG{o}{*}\PYG{n}{t} \PYG{o}{.*} \PYG{n+nb}{cos}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{2} \PYG{o}{.*} \PYG{p}{(}\PYG{n}{t}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{2}\PYG{p}{)} \PYG{o}{+} \PYG{n+nb}{cos}\PYG{p}{(}\PYG{l+m+mf}{2.}\PYG{o}{*}\PYG{n}{t}\PYG{p}{);}
+\PYG{n}{df} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{l+m+mf}{4.}\PYG{o}{*}\PYG{n}{t} \PYG{o}{+} \PYG{l+m+mf}{4.}\PYG{o}{*}\PYG{n}{t}\PYG{o}{.*}\PYG{n+nb}{sin}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mf}{2.}\PYG{o}{*}\PYG{n+nb}{sin}\PYG{p}{(}\PYG{l+m+mf}{2.}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mf}{4.}\PYG{o}{*}\PYG{n+nb}{cos}\PYG{p}{(}\PYG{n}{t}\PYG{p}{);}
+\PYG{c}{\PYGZpc{} We\PYGZsq{}ll need this for Modified Newton\PYGZsq{}s Method.}
+\PYG{n}{dff} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{l+m+mf}{8.}\PYG{o}{*}\PYG{n+nb}{sin}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mf}{4.}\PYG{o}{*}\PYG{n}{t}\PYG{o}{.*}\PYG{n+nb}{sin}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{l+m+mf}{4.}\PYG{o}{*}\PYG{n+nb}{cos}\PYG{p}{(}\PYG{l+m+mf}{2.}\PYG{o}{*}\PYG{n}{t}\PYG{p}{)} \PYG{o}{+} \PYG{l+m+mi}{4}
+\PYG{c}{\PYGZpc{} Use the midpoint as our initial guess.}
+\PYG{n}{MID} \PYG{p}{=} \PYG{p}{(}\PYG{l+m+mf}{0.0} \PYG{o}{+} \PYG{l+m+mf}{1.0}\PYG{p}{)} \PYG{o}{/} \PYG{l+m+mf}{2.0}
+\PYG{c}{\PYGZpc{} Want a zero within this error.}
+\PYG{n}{ERR} \PYG{p}{=} \PYG{l+m+mi}{10}\PYGZca{}\PYG{o}{\PYGZhy{}}\PYG{p}{(}\PYG{l+m+mi}{5}\PYG{p}{);}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Newton\PYGZsq{}s Method}
+
+\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{MID}\PYG{p}{];} 
+\PYG{k}{while} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{)))} \PYG{o}{\PYGZgt{}} \PYG{n}{ERR}
+	\PYG{n}{tmp} \PYG{p}{=} \PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{);}
+	\PYG{n}{nxt} \PYG{p}{=} \PYG{n}{tmp} \PYG{o}{\PYGZhy{}} \PYG{n}{f}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{)}\PYG{o}{/}\PYG{n}{df}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{);}
+	\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{steps} \PYG{n}{nxt}\PYG{p}{];}
+\PYG{k}{end}
+
+\PYG{c}{\PYGZpc{} Output the results for Newton\PYGZsq{}s Method}
+\PYG{n}{steps}
+\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{))}
+\PYG{n+nb}{plot}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{),} \PYG{l+s}{\PYGZsq{}LineWidth\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}DisplayName\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}Newtons Method\PYGZsq{}}\PYG{p}{);}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Modified Newton\PYGZsq{}s Method}
+
+\PYG{c}{\PYGZpc{} Use the midpoint as the initial step.}
+\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{l+m+mf}{0.5}\PYG{p}{];}
+
+\PYG{n}{mu} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{n}{f}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)} \PYG{o}{./} \PYG{n}{df}\PYG{p}{(}\PYG{n}{t}\PYG{p}{);}
+\PYG{c}{\PYGZpc{} Use the quotient rule from Calculus to get the derivative of mu.}
+\PYG{n}{dmu} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{p}{(}\PYG{n}{df}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)} \PYG{o}{.*} \PYG{n}{df}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)} \PYG{o}{\PYGZhy{}} \PYG{n}{f}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)} \PYG{o}{.*} \PYG{n}{dff}\PYG{p}{(}\PYG{n}{t}\PYG{p}{))} \PYG{o}{./} \PYG{p}{(}\PYG{n}{df}\PYG{p}{(}\PYG{n}{t}\PYG{p}{)}\PYG{o}{.\PYGZca{}}\PYG{l+m+mi}{2}\PYG{p}{);}
+
+\PYG{k}{while} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{mu}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{)))} \PYG{o}{\PYGZgt{}} \PYG{n}{ERR}
+	\PYG{n}{tmp} \PYG{p}{=} \PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{);}
+	\PYG{n}{nxt} \PYG{p}{=} \PYG{n}{tmp} \PYG{o}{\PYGZhy{}} \PYG{n}{mu}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{)}\PYG{o}{/}\PYG{n}{dmu}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{);}
+	\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{steps} \PYG{n}{nxt}\PYG{p}{];}
+\PYG{k}{end}
+
+\PYG{c}{\PYGZpc{} Output the results for Newton\PYGZsq{}s Method}
+\PYG{n}{steps}
+\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{))}
+\PYG{n+nb}{plot}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{),} \PYG{l+s}{\PYGZsq{}LineWidth\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}DisplayName\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}Modified Newtons Method\PYGZsq{}}\PYG{p}{);}
+
+\PYG{n+nb}{legend}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}show\PYGZsq{}}\PYG{p}{);}
+\PYG{k}{end}
+\end{Verbatim}

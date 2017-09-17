@@ -1,0 +1,67 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function} \PYG{n+nf}{p7}
+\PYG{n}{clear} \PYG{n+nb}{all}\PYG{p}{;}
+\PYG{n+nb}{close} \PYG{n+nb}{all}\PYG{p}{;}
+\PYG{n+nb}{hold} \PYG{n}{on}\PYG{p}{;}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Initial Parameters}
+\PYG{n}{g} \PYG{p}{=} \PYG{l+m+mf}{32.17}\PYG{p}{;}
+\PYG{n}{m} \PYG{p}{=} \PYG{l+m+mf}{0.25}\PYG{p}{;}
+\PYG{n}{k} \PYG{p}{=} \PYG{l+m+mf}{0.1}\PYG{p}{;}
+\PYG{n}{s0} \PYG{p}{=} \PYG{l+m+mi}{300}\PYG{p}{;}
+\PYG{n}{ERR} \PYG{p}{=} \PYG{l+m+mf}{0.01}\PYG{p}{;}
+
+\PYG{c}{\PYGZpc{} Initial guess of 5 seconds. Turned out to be super close.}
+\PYG{n}{GUESS} \PYG{p}{=} \PYG{l+m+mi}{5}\PYG{p}{;}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Find the 0 of f, using function f,df, and/or g.}
+\PYG{n}{f} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{n}{s0} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n}{m}\PYG{o}{*}\PYG{n}{g}\PYG{o}{/}\PYG{n}{k}\PYG{p}{)}\PYG{o}{.*}\PYG{n}{t} \PYG{o}{+} \PYG{p}{(}\PYG{n}{m}\PYG{o}{*}\PYG{n}{m}\PYG{o}{*}\PYG{n}{g}\PYG{o}{/}\PYG{p}{(}\PYG{n}{k}\PYG{o}{*}\PYG{n}{k}\PYG{p}{))}\PYG{o}{.*}\PYG{p}{(}\PYG{l+m+mi}{1} \PYG{o}{\PYGZhy{}} \PYG{n+nb}{exp}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{k}\PYG{o}{.*}\PYG{n}{t}\PYG{o}{./}\PYG{n}{m}\PYG{p}{));}
+\PYG{n}{df} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{p}{(}\PYG{n}{m}\PYG{o}{*}\PYG{n}{g}\PYG{o}{*}\PYG{p}{(}\PYG{n+nb}{exp}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{k}\PYG{o}{.*}\PYG{n}{t}\PYG{o}{./}\PYG{n}{m}\PYG{p}{)}\PYG{o}{\PYGZhy{}}\PYG{l+m+mi}{1}\PYG{p}{))} \PYG{o}{./} \PYG{n}{k}\PYG{p}{;}
+\PYG{n}{g} \PYG{p}{=} \PYG{p}{@(}\PYG{n}{t}\PYG{p}{)} \PYG{p}{(}\PYG{n}{s0} \PYG{o}{+} \PYG{n}{m}\PYGZca{}\PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{g}\PYG{o}{/}\PYG{p}{(}\PYG{n}{k}\PYGZca{}\PYG{l+m+mi}{2}\PYG{p}{)}\PYG{o}{*}\PYG{p}{(}\PYG{l+m+mi}{1}\PYG{o}{\PYGZhy{}}\PYG{n+nb}{exp}\PYG{p}{(}\PYG{o}{\PYGZhy{}}\PYG{n}{k}\PYG{o}{*}\PYG{n}{t}\PYG{o}{/}\PYG{n}{m}\PYG{p}{)))} \PYG{o}{*} \PYG{n}{k}\PYG{o}{/}\PYG{p}{(}\PYG{n}{m}\PYG{o}{*}\PYG{n}{g}\PYG{p}{);}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Fixed\PYGZhy{}Point Iteration}
+
+\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{GUESS}\PYG{p}{];}
+\PYG{k}{while} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{)))} \PYG{o}{\PYGZgt{}} \PYG{n}{ERR}
+	\PYG{n}{tmp} \PYG{p}{=} \PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{);}
+	\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{steps} \PYG{n}{g}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{)];}
+\PYG{k}{end}
+
+\PYG{c}{\PYGZpc{} Output the results for Fixed\PYGZhy{}Point Iteration}
+\PYG{n}{steps}
+\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{))}
+\PYG{n+nb}{plot}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{),} \PYG{l+s}{\PYGZsq{}LineWidth\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}DisplayName\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}Fixed\PYGZhy{}Point Iteration\PYGZsq{}}\PYG{p}{);}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Steffensen\PYGZsq{}s Method}
+ 
+\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{GUESS}\PYG{p}{];}
+\PYG{k}{while} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{)))} \PYG{o}{\PYGZgt{}} \PYG{n}{ERR}
+	\PYG{n}{p0} \PYG{p}{=} \PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{);}
+	\PYG{n}{p1} \PYG{p}{=} \PYG{n}{g}\PYG{p}{(}\PYG{n}{p0}\PYG{p}{);}
+	\PYG{n}{p2} \PYG{p}{=} \PYG{n}{g}\PYG{p}{(}\PYG{n}{p1}\PYG{p}{);}
+	\PYG{n}{p} \PYG{p}{=} \PYG{n}{p0} \PYG{o}{\PYGZhy{}} \PYG{p}{(}\PYG{n}{p1}\PYG{o}{\PYGZhy{}}\PYG{n}{p0}\PYG{p}{)}\PYGZca{}\PYG{l+m+mi}{2} \PYG{o}{/} \PYG{p}{(}\PYG{n}{p2} \PYG{o}{\PYGZhy{}} \PYG{l+m+mi}{2}\PYG{o}{*}\PYG{n}{p1} \PYG{o}{+} \PYG{n}{p0}\PYG{p}{);}
+	\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{steps} \PYG{n}{p}\PYG{p}{];}
+\PYG{k}{end}
+
+\PYG{c}{\PYGZpc{} Output the results for Steffensen\PYGZsq{}s Method}
+\PYG{n}{steps}
+\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{))}
+\PYG{n+nb}{plot}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{),} \PYG{l+s}{\PYGZsq{}LineWidth\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}DisplayName\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}Steffensens Method\PYGZsq{}}\PYG{p}{);}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Newton\PYGZsq{}s Method}
+
+\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{GUESS}\PYG{p}{];}
+\PYG{k}{while} \PYG{n+nb}{abs}\PYG{p}{(}\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{)))} \PYG{o}{\PYGZgt{}} \PYG{n}{ERR}
+	\PYG{n}{tmp} \PYG{p}{=} \PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{);}
+	\PYG{n}{nxt} \PYG{p}{=} \PYG{n}{tmp} \PYG{o}{\PYGZhy{}} \PYG{n}{f}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{)}\PYG{o}{/}\PYG{n}{df}\PYG{p}{(}\PYG{n}{tmp}\PYG{p}{);}
+	\PYG{n}{steps} \PYG{p}{=} \PYG{p}{[}\PYG{n}{steps} \PYG{n}{nxt}\PYG{p}{];}
+\PYG{k}{end}
+
+\PYG{c}{\PYGZpc{} Output the results for Newton\PYGZsq{}s Method}
+\PYG{n}{steps}
+\PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{(}\PYG{k}{end}\PYG{p}{))}
+\PYG{n+nb}{plot}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{,} \PYG{n}{f}\PYG{p}{(}\PYG{n}{steps}\PYG{p}{),} \PYG{l+s}{\PYGZsq{}LineWidth\PYGZsq{}}\PYG{p}{,} \PYG{l+m+mi}{3}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}DisplayName\PYGZsq{}}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}Newtons Method\PYGZsq{}}\PYG{p}{);}
+
+\PYG{n+nb}{legend}\PYG{p}{(}\PYG{l+s}{\PYGZsq{}show\PYGZsq{}}\PYG{p}{);}
+\PYG{k}{end}
+\end{Verbatim}

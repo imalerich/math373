@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.30)  10 SEP 2017 14:24
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.30)  17 SEP 2017 14:51
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -543,6 +543,17 @@ LaTeX Info: Redefining \genfrac on input line 145.
 \cur@row=\count286
 \cur@col=\count287
 \conditionsep=\skip73
+) (/usr/share/texmf-dist/tex/latex/soul/soul.sty
+Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
+\SOUL@word=\toks24
+\SOUL@lasttoken=\toks25
+\SOUL@cmds=\toks26
+\SOUL@buffer=\toks27
+\SOUL@token=\toks28
+\SOUL@spaceskip=\skip74
+\SOUL@ttwidth=\dimen199
+\SOUL@uldp=\dimen256
+\SOUL@ulht=\dimen257
 ) (/usr/share/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
 (/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
@@ -572,38 +583,38 @@ tim
 ) (/usr/share/texmf-dist/tex/latex/lineno/lineno.sty
 Package: lineno 2005/11/02 line numbers on paragraphs v4.41
 \linenopenalty=\count292
-\output=\toks24
+\output=\toks29
 \linenoprevgraf=\count293
-\linenumbersep=\dimen199
-\linenumberwidth=\dimen256
+\linenumbersep=\dimen258
+\linenumberwidth=\dimen259
 \c@linenumber=\count294
 \c@pagewiselinenumber=\count295
 \c@LN@truepage=\count296
 \c@internallinenumber=\count297
 \c@internallinenumbers=\count298
-\quotelinenumbersep=\dimen257
-\bframerule=\dimen258
-\bframesep=\dimen259
+\quotelinenumbersep=\dimen260
+\bframerule=\dimen261
+\bframesep=\dimen262
 \bframebox=\box53
 LaTeX Info: Redefining \\ on input line 3056.
 )
 \c@FV@TrueTabGroupLevel=\count299
 \c@FV@TrueTabCounter=\count300
 \FV@TabBox@Group=\box54
-\FV@TmpLength=\skip74
+\FV@TmpLength=\skip75
 \c@FV@HighlightLinesStart=\count301
 \c@FV@HighlightLinesStop=\count302
 \FV@LoopCount=\count303
 \FV@NCharsBox=\box55
-\FV@BreakIndent=\dimen260
+\FV@BreakIndent=\dimen263
 \FV@BreakIndentNChars=\count304
-\FV@BreakSymbolSepLeft=\dimen261
+\FV@BreakSymbolSepLeft=\dimen264
 \FV@BreakSymbolSepLeftNChars=\count305
-\FV@BreakSymbolSepRight=\dimen262
+\FV@BreakSymbolSepRight=\dimen265
 \FV@BreakSymbolSepRightNChars=\count306
-\FV@BreakSymbolIndentLeft=\dimen263
+\FV@BreakSymbolIndentLeft=\dimen266
 \FV@BreakSymbolIndentLeftNChars=\count307
-\FV@BreakSymbolIndentRight=\dimen264
+\FV@BreakSymbolIndentRight=\dimen267
 \FV@BreakSymbolIndentRightNChars=\count308
 \c@FancyVerbLineBreakLast=\count309
 \FV@LineBox=\box56
@@ -630,17 +641,17 @@ runsystem(rm -- "imm-hw01.w18")...executed.
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 ) (/usr/share/texmf-dist/tex/latex/framed/framed.sty
 Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
-\OuterFrameSep=\skip75
-\fb@frw=\dimen265
-\fb@frh=\dimen266
-\FrameRule=\dimen267
-\FrameSep=\dimen268
+\OuterFrameSep=\skip76
+\fb@frw=\dimen268
+\fb@frh=\dimen269
+\FrameRule=\dimen270
+\FrameSep=\dimen271
 ) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \c@float@type=\count312
-\float@exts=\toks25
+\float@exts=\toks30
 \float@box=\box58
-\@float@everytoks=\toks26
+\@float@everytoks=\toks31
 \@floatcapt=\box59
 )
 \minted@appexistsfile=\read2
@@ -648,7 +659,7 @@ Package: float 2001/11/08 v1.3d Float enhancements (AL)
 \minted@code=\write5
 \c@minted@FancyVerbLineTemp=\count313
 \c@minted@pygmentizecounter=\count314
-\@float@every@listing=\toks27
+\@float@every@listing=\toks32
 \c@listing=\count315
 )
 runsystem(mkdir -p _minted-imm-hw01)...executed.
@@ -660,31 +671,31 @@ Package: caption 2016/02/21 v3.3-144 Customizing captions (AR)
 (/usr/share/texmf-dist/tex/latex/caption/caption3.sty
 Package: caption3 2016/05/22 v1.7-166 caption3 kernel (AR)
 Package caption3 Info: TeX engine: e-TeX on input line 67.
-\captionmargin=\dimen269
-\captionmargin@=\dimen270
-\captionwidth=\dimen271
-\caption@tempdima=\dimen272
-\caption@indent=\dimen273
-\caption@parindent=\dimen274
-\caption@hangindent=\dimen275
+\captionmargin=\dimen272
+\captionmargin@=\dimen273
+\captionwidth=\dimen274
+\caption@tempdima=\dimen275
+\caption@indent=\dimen276
+\caption@parindent=\dimen277
+\caption@hangindent=\dimen278
 )
 \c@ContinuedFloat=\count316
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
 \c@KVtest=\count317
-\sf@farskip=\skip76
-\sf@captopadj=\dimen276
-\sf@capskip=\skip77
-\sf@nearskip=\skip78
+\sf@farskip=\skip77
+\sf@captopadj=\dimen279
+\sf@capskip=\skip78
+\sf@nearskip=\skip79
 \c@subfigure=\count318
 \c@subfigure@save=\count319
 \c@lofdepth=\count320
 \c@subtable=\count321
 \c@subtable@save=\count322
 \c@lotdepth=\count323
-\sf@top=\skip79
-\sf@bottom=\skip80
+\sf@top=\skip80
+\sf@bottom=\skip81
 ) (/usr/share/texmf-dist/tex/latex/koma-script/scrextend.sty
 Package: scrextend 2017/04/13 v3.23 KOMA-Script package (extend other classes w
 ith features of KOMA-Script classes)
@@ -707,6 +718,17 @@ LaTeX Warning: Command \@footnotemark  has changed.
 LaTeX Info: Redefining \textsubscript on input line 1298.
 ) (/usr/share/texmf-dist/tex/latex/setspace/setspace.sty
 Package: setspace 2011/12/19 v6.7a set line spacing
+) (/usr/share/texmf-dist/tex/latex/amscls/amsthm.sty
+Package: amsthm 2015/03/04 v2.20.2
+\thm@style=\toks33
+\thm@bodyfont=\toks34
+\thm@headfont=\toks35
+\thm@notefont=\toks36
+\thm@headpunct=\toks37
+\thm@preskip=\skip82
+\thm@postskip=\skip83
+\thm@headsep=\skip84
+\dth@everypar=\toks38
 ) (/usr/share/texmf-dist/tex/latex/xcolor/xcolor.sty
 Package: xcolor 2016/05/11 v2.12 LaTeX color extensions (UK)
 (/usr/share/texmf-dist/tex/latex/graphics-cfg/color.cfg
@@ -781,16 +803,16 @@ LaTeX Font Info:    ... okay on input line 8.
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
 \scratchcounter=\count324
-\scratchdimen=\dimen277
+\scratchdimen=\dimen280
 \scratchbox=\box61
 \nofMPsegments=\count325
 \nofMParguments=\count326
-\everyMPshowfont=\toks28
+\everyMPshowfont=\toks39
 \MPscratchCnt=\count327
-\MPscratchDim=\dimen278
+\MPscratchDim=\dimen281
 \MPnumerator=\count328
 \makeMPintoPDFobject=\count329
-\everyMPtoPDFconversion=\toks29
+\everyMPtoPDFconversion=\toks40
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
 (/usr/share/texmf-dist/tex/latex/oberdiek/grfext.sty
@@ -832,120 +854,125 @@ File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 LaTeX Font Info:    Try loading font information for U+msb on input line 15.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
-)
-
-! LaTeX Error: Environment proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.25 	\begin{proof}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.30 	\end{proof}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: Environment proof undefined.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.34 	\begin{proof}
-                   
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{document} ended by \end{proof}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.36 	\end{proof}
-                 
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
+) [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2]
 ! Double superscript.
 <recently read> ^
                  
-l.117 ...)$. As $e^x$ is non-decreasing, and $e^x'
+l.132 ...)$. As $e^x$ is non-decreasing, and $e^x'
                                                    = e^x$
 I treat `x^1^2' essentially like `x^1{}^2'.
 
 [3] (./_minted-imm-hw01/default-pyg-prefix.pygstyle) (./_minted-imm-hw01/friend
 ly.pygstyle)
-(./_minted-imm-hw01/639D43B6552FDB8F0826FD7878B3D3FA8448A968047D5AEE430DB0FB803
+(./_minted-imm-hw01/1D7E772F91B3775ED2072F80965F06908448A968047D5AEE430DB0FB803
 8453F.pygtex
 LaTeX Font Info:    Font shape `OT1/cmtt/bx/n' in size <12> not available
 (Font)              Font shape `OT1/cmtt/m/n' tried instead on input line 2.
 [4])
-(./_minted-imm-hw01/1628D6DDE87DB5094183A54707FAA990C1AA0BE507555BF9EE7DA896092
-928A6.pygtex)
-<p4.png, id=56, 578.16pt x 433.62pt>
+runsystem(pygmentize -l text -f latex -P commandprefix=PYG -F tokenmerge -o _mi
+nted-imm-hw01/7FBDD5DDF6FE1287BA6C6270F48B4C5CC1AA0BE507555BF9EE7DA896092928A6.
+pygtex p4.results)...executed.
+
+
+(./_minted-imm-hw01/7FBDD5DDF6FE1287BA6C6270F48B4C5CC1AA0BE507555BF9EE7DA896092
+928A6.pygtex) [5]
+<p4.png, id=62, 578.16pt x 433.62pt>
 File: p4.png Graphic file (type png)
 <use p4.png>
-Package pdftex.def Info: p4.png  used on input line 157. on input line 157.
+Package pdftex.def Info: p4.png  used on input line 175. on input line 175.
+Package pdftex.def Info: Requested size: 462.52863pt x 346.89647pt on input lin
+e 175.
+[6
+
+ <./p4.png>]
+(./_minted-imm-hw01/B2312BF53456B2A76AB941B50447DA86C2DC2D3C13A07E293EA5FAC6126
+1009D.pygtex [7])
+(./_minted-imm-hw01/DFC64A2C66AA2DF14B5E285D3D49FD9F0CB5DF3182DAD6FA831B97084AF
+E1BD1.pygtex)
+(./_minted-imm-hw01/06C27C308D285EEFCBD247B3FA22A29A59139C1BBBF08E476260CB7FAF9
+7450A.pygtex)
+<p5.png, id=74, 578.16pt x 433.62pt>
+File: p5.png Graphic file (type png)
+<use p5.png>
+Package pdftex.def Info: p5.png  used on input line 203. on input line 203.
+Package pdftex.def Info: Requested size: 289.07928pt x 216.80946pt on input lin
+e 203.
+[8 <./p5.png (PNG copy)>]
+(./_minted-imm-hw01/93C85E750F5F1E2958C95464CBF65489CC1B92CB202BFDF728F26DAE996
+FFC14.pygtex [9] [10])
+(./_minted-imm-hw01/12DCA38E19A9479DF79473DCAD066C87A7DB13CE994C20993BEB41A26F1
+58DCC.pygtex)
+(./_minted-imm-hw01/F97FD953D41A9241BD9B73BEDE8C1670FC7F20204C288138C885691F310
+8A46D.pygtex)
+(./_minted-imm-hw01/38F8CCAD308EBEA3784BCAE73A80A99A9722FE03FDDBB5A3B74F626F910
+8FCE8.pygtex) [11]
+(./_minted-imm-hw01/13EA42340D4C4969470E43554CFAAB40A56FC9B71B6A8191AD226D74808
+A08A9.pygtex)
+<p6.png, id=97, 578.16pt x 433.62pt>
+File: p6.png Graphic file (type png)
+<use p6.png>
+Package pdftex.def Info: p6.png  used on input line 259. on input line 259.
 Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
- 157.
-[5] [6 <./p4.png (PNG copy)>] [7] [8]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 207.
-[9]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 207.
+ 259.
+[12
+
+ <./p6.png (PNG copy)>]
+(./_minted-imm-hw01/2811C6BBA1E464F4506A560A06DC8C34A0B73ED8E00152DB37938945EE8
+8B97C.pygtex [13])
+(./_minted-imm-hw01/C5FD8AF0CFFD292F635AF4748AE2FBB32DF4B5DF385706A3D2614EF06E7
+E218E.pygtex)
+(./_minted-imm-hw01/026898C92CF269196168F9D75F8982DAC634979AF0DF45CADA9CC69B28B
+8D0FF.pygtex [14])
+(./_minted-imm-hw01/94EE4814758DFF7BEC6B5F3442227B33BBCF1D8419EAD9EAC7870D6F97B
+B345D.pygtex)
+<p7.png, id=113, 578.16pt x 433.62pt>
+File: p7.png Graphic file (type png)
+<use p7.png>
+Package pdftex.def Info: p7.png  used on input line 302. on input line 302.
+Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
+ 302.
+runsystem(rm _minted-imm-hw01/1628D6DDE87DB5094183A54707FAA990C1AA0BE507555BF9E
+E7DA896092928A6.pygtex)...executed.
+
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 305.
+[15 <./p7.png (PNG copy)>]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 305.
 (./imm-hw01.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 207.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 207.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 305.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 305.
 Package rerunfilecheck Info: File `imm-hw01.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 207.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 305.
  ) 
 Here is how much of TeX's memory you used:
- 20879 strings out of 492990
- 370636 string characters out of 6138688
- 516193 words of memory out of 5000000
- 24186 multiletter control sequences out of 15000+600000
- 536166 words of font info for 45 fonts, out of 8000000 for 9000
+ 21216 strings out of 492990
+ 381091 string characters out of 6138688
+ 521985 words of memory out of 5000000
+ 24467 multiletter control sequences out of 15000+600000
+ 536826 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 46i,11n,45p,10414b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
+ 46i,11n,45p,10422b,544s stack positions out of 5000i,500n,10000p,200000b,80000s
  </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmitt10.720pk>
  </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </
 home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.720pk> </usr
 /share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/imalerich/.t
 exlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy6.600pk> </home/imalerich/.texli
 ve/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/imalerich/.texlive/t
-exmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </usr/share/texmf-dist/fonts/p
-k/ljfour/public/cm/dpi600/cmr8.pk> </home/imalerich/.texlive/texmf-var/fonts/pk
-/ljfour/public/cm/cmmi8.600pk> </home/imalerich/.texlive/texmf-var/fonts/pk/ljf
-our/public/cm/cmsy10.720pk> </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour
-/public/cm/cmmi12.600pk> </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/pu
-blic/cm/cmbx12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/c
-mr12.pk>
-Output written on imm-hw01.pdf (9 pages, 107851 bytes).
+exmf-var/fonts/pk/ljfour/public/amsfonts/symbols/msbm10.720pk> </home/imalerich
+/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmti12.600pk> </home/imalerich/.t
+exlive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </usr/share/texmf-dist
+/fonts/pk/ljfour/public/cm/dpi600/cmr8.pk> </home/imalerich/.texlive/texmf-var/
+fonts/pk/ljfour/public/cm/cmmi8.600pk> </home/imalerich/.texlive/texmf-var/font
+s/pk/ljfour/public/cm/cmsy10.720pk> </home/imalerich/.texlive/texmf-var/fonts/p
+k/ljfour/public/cm/cmmi12.600pk> </home/imalerich/.texlive/texmf-var/fonts/pk/l
+jfour/public/cm/cmbx12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/
+dpi600/cmr12.pk>
+Output written on imm-hw01.pdf (15 pages, 189177 bytes).
 PDF statistics:
- 400 PDF objects out of 1000 (max. 8388607)
- 128 compressed objects within 2 object streams
- 42 named destinations out of 1000 (max. 500000)
- 6 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 469 PDF objects out of 1000 (max. 8388607)
+ 156 compressed objects within 2 object streams
+ 48 named destinations out of 1000 (max. 500000)
+ 21 words of extra memory for PDF output out of 10000 (max. 10000000)
 
