@@ -1,0 +1,27 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function} \PYG{n+nf}{p2}
+
+\PYG{n}{x} \PYG{p}{=} \PYG{l+m+mf}{0.43}\PYG{p}{;}
+\PYG{n}{xi} \PYG{p}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{l+m+mf}{0.25} \PYG{l+m+mf}{0.5} \PYG{l+m+mf}{0.75}\PYG{p}{];}
+\PYG{n}{fi} \PYG{p}{=} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{l+m+mf}{1.64872} \PYG{l+m+mf}{2.71828} \PYG{l+m+mf}{4.48169}\PYG{p}{];}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Neville\PYGZsq{}s Method}
+
+\PYG{c}{\PYGZpc{} degree one}
+\PYG{n}{neville}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{xi}\PYG{p}{(:,}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{p}{),} \PYG{n}{fi}\PYG{p}{(:,}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{p}{))}
+\PYG{c}{\PYGZpc{} degree two}
+\PYG{n}{neville}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{xi}\PYG{p}{(:,}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{4}\PYG{p}{),} \PYG{n}{fi}\PYG{p}{(:,}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{4}\PYG{p}{))}
+\PYG{c}{\PYGZpc{} degree three}
+\PYG{n}{neville}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{xi}\PYG{p}{(:,}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{4}\PYG{p}{),} \PYG{n}{fi}\PYG{p}{(:,}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{4}\PYG{p}{))}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Newton\PYGZsq{}s Divided\PYGZhy{}Difference}
+
+\PYG{c}{\PYGZpc{} degree one}
+\PYG{n}{ndd}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{xi}\PYG{p}{(:,}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{p}{),} \PYG{n}{fi}\PYG{p}{(:,}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{p}{))}
+\PYG{c}{\PYGZpc{} degree two}
+\PYG{n}{ndd}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{xi}\PYG{p}{(:,}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{4}\PYG{p}{),} \PYG{n}{fi}\PYG{p}{(:,}\PYG{l+m+mi}{2}\PYG{p}{:}\PYG{l+m+mi}{4}\PYG{p}{))}
+\PYG{c}{\PYGZpc{} degree three}
+\PYG{n}{ndd}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{xi}\PYG{p}{(:,}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{p}{),} \PYG{n}{fi}\PYG{p}{(:,}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{l+m+mi}{3}\PYG{p}{))}
+
+\PYG{k}{end}
+\end{Verbatim}

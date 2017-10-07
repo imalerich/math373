@@ -1,0 +1,218 @@
+\documentclass[10pt]{jhwhw}
+\author{Ian Malerich}
+\title{Math S 373: Homework 1}
+\usepackage{amssymb, amsfonts, amsmath, mathtools, graphicx, breqn, soul}
+\usepackage{minted, subfig, float, scrextend, setspace, amsthm}
+\usemintedstyle{friendly}
+
+\begin{document}
+\raggedright
+
+%% Problem 1
+\problem{} (25 points)
+
+	\begin{enumerate}
+		\item Use appropriate Lagrange interpolating polynomials of degrees one, two, and three
+			to approximate $f(0.43)$ if
+			$$
+				f(0) = 1, f(0.25) = 1.64872, f(0.5) = 2.71828, f(0.75) = 4.48169
+			$$
+		\item Use Neville's method to obtain the approximations for (a). (You may use
+			Matlab or other softwares to solve this part. Copies of codes and 
+			results must be submitted)
+		\item The data in (a) is generated using $f(x) = e^{2x}$. Use the error formula
+			to find a bound for the error, and compare the bound to the actual error for the
+			cases n=1 and n=2.
+		\item Repeat (a) using Newton divided-difference formula. (You may use Matlab
+			or other softwares to solve this part. Copies of codes and results must be 
+			submitted.)
+	\end{enumerate}
+
+\solution
+
+	\part
+
+	For the first degree polynomial we use the points $0.25$ and $0.5$ 
+	as we would like to approximate $0.43$ within their bounds.
+	\begin{align*}
+		L_1(x) &= 1.64872 \frac{(x-0.5)}{0.25-0.5} + 2.71828 \frac{(x-0.25)}{0.5-0.25} \\
+		&=\ 4.27824x + 0.57916
+	\end{align*}
+	\hl{$L_1(0.43) = 2.4188032$} \\
+
+	For the second degree polynomial I could either the first or last point, 
+	I found that adding the last point produced a more accurate solution, so I'll use that here.
+	\begin{align*}
+		L_2(x) &=\ 1\times \frac{(x-0.5)(x-0.75)}{(0.25-0.5)(0.25-0.75)} 
+			+ 1.64872\times \frac{(x-0.25)(x-0.75)}{(0.5-0.25)(0.5-0.75)} \\
+			&+\ 2.71828\times \frac{(x-0.25)(x-0.5)}{(0.75-0.25)(0.75-0.5)} \\
+		&= \ 5.5508^2 + 0.11514x + 1.27301\\
+	\end{align*}
+	\hl{$L_2(0.43) = 2.34886312$}
+
+	Then for the third degree polynomial, simply use all of the points available.
+	\begin{align*}
+		L_3(x) &=\ \frac{(x-0.25)(x-0.5)(x-0.75)}	{(-0.25)(-0.5)(-0.75)} + 
+			1.64872	\frac{(x-0)(x-0.5)(x-0.75)}		{(0.25)(0.25-0.5)(0.25-0.75)} \\
+			&+\ 2.71828	\frac{(x-0)(x-0.25)(x-0.75)}{(0.5)(0.5-0.25)(0.5-0.75)} + 
+			0.75	\frac{(x-0)(x-0.25)(x-0.5)}		{(0.75)(0.75-0.25)(0.75-0.5)} \\
+		&=\ 2.91211x^3 + 1.18264x^2 + 2.11721x + 1 \\
+	\end{align*}
+	\hl{$L_3(0.43) = 2.36060356577$}
+
+	\part
+
+	$N_1(0.43) = $\hl{ $2.41880$},
+	$N_2(0.43) = $\hl{ $2.34886$},
+	$N_3(0.43) = $\hl{ $2.36060$} \\
+	Here we can see that the results by Neville's method are equivalent to those
+	produced by Lagrange's method, although the Matlab results produced a slightly
+	lesser degree of accuracy. The code to produce these results can be found 
+	at the bottom of this problem.
+
+	\part
+
+	Firsts, we compute the actual error for each degree of our polynomial. 
+	Where $e^{2(0.43)} = 2.36316$ is the actual result. \\
+	\begin{align*}
+		\text{degree one: } & \lvert\ 2.4188032 - 2.36316\rvert = 0.0556425 \\
+		\text{degree two: } & \lvert\ 2.34886312 - 2.36316\rvert = 0.01429688 \\
+		\text{degree three: } & \lvert\ 2.36060356577 - 2.36316\rvert = 0.00255643423 \\
+	\end{align*}
+
+	The Lagrange polynomial error term is given by 
+	$$
+	|\frac{f^{(n+1)}(\xi(x))}{(n+1)!}(x-x_0)(x-x_1)\cdots(x-x_n)|
+	$$
+
+	To find maximum error, we would like to maximize the term:
+	$\lvert f^{(n+1)}(\xi(x))\rvert $.
+
+	\bigbreak
+	For degree one we want the maximum on the bounds $(0.25, 0.5)$: \\
+	max($|f''(\xi(x))| $) =
+	max($|4e^{2(\xi(x))}| $) = $|4e^{2*0.5}|$ = 10.8731. \\
+	With just a little more work we have the maximum error as
+	$|\frac{10.8731}{2!}(0.43-0.25)(0.43-0.5)| =$ \hl{$0.0685$}. We can see
+	that our actual error of $0.0556425$ is just squeezing underneath this maximal value.
+
+	\bigbreak
+	Next for degree two, we want the maximum on the bounds $(0.25, 0.75)$: \\
+	max($|f^{(3)}(\xi(x))| $) =
+	max($|8e^{2(\xi(x))}| $) = $|8e^{2*0.75}|$ = 35.8535. \\
+	Then to compute maximum error,
+	$|\frac{33.8535}{3!}(0.43-0.25)(0.43-0.5)(0.43-0.75)| =$ \hl{$0.0225877$}.
+	This error is obviously improved accuracy over degree one, and again we see that
+	our actual error of $0.01429688$ is well within its bounds.
+
+	\bigbreak
+	Finally for degree three, we want the maximum on the full bounds $(0, 0.75)$: \\
+	max($|f^{(4)}(\xi(x))| $) =
+	max($|16e^{2(\xi(x))}| $) = $|16e^{2*0.75}|$ = 71.7070. \\
+	Then to compute maximum error,
+	$|\frac{71.7070}{4!}(0.43-0)(0.43-0.25)(0.43-0.5)(0.43-0.75)| =$ \hl{$0.00485636$}.
+	Again, this behaves as we'd expect, less error than degree two, and our actual
+	error of $0.00255643423$ is again well within its bounds.
+
+	\clearpage
+	\part
+
+	ndd$_1(0.43)$ = \hl{2.4188} \\
+	ndd$_2(0.43)$ = \hl{2.3489} \\
+	ndd$_3(0.43)$ = \hl{2.3764} \\
+
+	\bigbreak
+	\inputminted{octave}{p2.m}
+	\clearpage
+	\inputminted{octave}{ndd.m}
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}
+	\inputminted{octave}{divideddifference.m}
+	\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}
+	\inputminted{octave}{neville.m}
+
+%% Problem 2
+\problem{} (25 points)
+
+	The Bernstein polynomial of degree $n$ for $f\in C[0,1]$ is given by
+	$$
+		B_n(x) = \Sigma_{k=0}^{n}{n\choose k} f(k/n)x^k (1-x)^{n-k},
+	$$
+	where ${n\choose k} = n!/(k!(n-k)!)$. These polynomials can be used in a constructive
+	proof of Weierstrass Approximation Theorem since $\lim_{n\rightarrow\infty}B_n(x) = f(x)$,
+	for each $x\in [0,1]$.
+	\begin{enumerate}
+		\item Find $B_3(x)$ for the functions: (i) $f(x)=x$ and (ii) $f(x)=1$.
+		\item Show that for each $k\leq n$,
+			$$
+				{n-1\choose k-1} = \frac{k}{n} {n\choose k}
+			$$
+		\item Use part (b) and the fact,  from (ii) in part (a), that
+			$$
+				1 = \Sigma_{k=0}^{n} {n\choose k}x^k(1-x)^{n-k), \text{ for each } n,
+			$$
+			to show that for $f(x) = x^2$,
+			$$
+				B_n(x) = \frac{n-1}{n}x^2 + \frac{1}{n}x.
+			$$
+		\item Use part (c) to estimate the value of $n$ necessary for $|B_n(x) - x^2| \leq 10^{-6}$
+			to hold for all $x\in [0,1]$.
+	\end{enumerate}
+
+\solution
+
+	TODO
+
+%% Problem 3
+\problem{} (10 points)
+
+	\begin{enumerate}
+		\item Show that the cubic polynomials
+			$$
+				P(x) = 3 - 2(x+1) + 0(x+1)(x) + (x+1)(x)(x-1)
+			$$
+			and
+			$$
+				Q(x) = -1 + 4(x+2) - 3(x+2)(x+1) + (x+2)(x+1)(x)
+			$$
+			both interpolate the data
+			$f(-2) = -1, f(-1) = 3, f(0) = 1, f(1) = -1, f(2) = 3$
+		\item Why does part (a) not violate the uniqueness property of interpolating 
+			polynomials?
+	\end{enumerate}
+
+\solution
+
+	TODO
+
+%% Problem 4
+\problem{} (20 points)
+
+	(You may use Matlab or other softwares to solve this problem. Copies of codes and results
+	must be submitted.)
+	Let $f(x) = 3xe^x - e^{2x}$.
+	\begin{enumerate}
+		\item Approximate $f(1.03)$ by the Hermite interpolating polynomial of dgree at most
+			three using $x_0 = 1$ and $x_1 = 1.05$. Compare the actual error to the error bound.
+		\item Repeat (a) with the Hermite interpolating polynomial of degree at most five,
+			using $x_0=1, x_1=1.05$ and $x_2 = 1.07$.
+	\end{enumerate}
+
+\solution
+
+	TODO
+
+%% Problem 5
+\problem{} (20 points)
+
+	\begin{enumerate}
+		\item Determine the free cubic spline $S$ that interpolates the data $f(0) = 0,$
+			$f(1) =1$ and $f(2)=2$.
+		\item Determine the clamped cubic spline $s$ that interpolates the data
+			$f(0) = 0, f(1) = 1, f(2) = 2$ and satisfies $s'(0) = s'(2) = 1$.
+	\end{enumerate}
+
+\solution
+
+	TODO
+
+\end{document}

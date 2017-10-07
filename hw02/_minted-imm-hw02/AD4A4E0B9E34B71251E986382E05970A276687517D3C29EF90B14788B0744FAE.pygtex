@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function}\PYG{+w}{ }res \PYG{p}{=}\PYG{+w}{ }\PYG{n+nf}{ndd}\PYG{p}{(}x, xi, fi\PYG{p}{)}
+
+\PYG{n}{M} \PYG{p}{=} \PYG{n}{divideddifference}\PYG{p}{(}\PYG{n}{xi}\PYG{p}{,} \PYG{n}{fi}\PYG{p}{);}
+\PYG{n}{n} \PYG{p}{=} \PYG{n+nb}{length}\PYG{p}{(}\PYG{n}{M}\PYG{p}{);}
+\PYG{n}{res} \PYG{p}{=} \PYG{l+m+mi}{0}\PYG{p}{;}
+
+\PYG{n}{X} \PYG{p}{=} \PYG{l+m+mi}{1}\PYG{p}{;}
+\PYG{k}{for} \PYG{n}{i}\PYG{p}{=}\PYG{l+m+mi}{1}\PYG{p}{:}\PYG{n}{n}
+	\PYG{n}{C} \PYG{p}{=}  \PYG{n}{M}\PYG{p}{(}\PYG{n}{i}\PYG{p}{,}\PYG{n}{i}\PYG{p}{);}
+	\PYG{n}{res} \PYG{p}{=} \PYG{n}{res} \PYG{o}{+} \PYG{n}{C} \PYG{o}{*} \PYG{n}{X}\PYG{p}{;}
+	\PYG{n}{X} \PYG{p}{=} \PYG{n}{X} \PYG{o}{*} \PYG{p}{(}\PYG{n}{x} \PYG{o}{\PYGZhy{}} \PYG{n}{xi}\PYG{p}{(}\PYG{n}{i}\PYG{p}{));}
+\PYG{k}{end}
+
+\PYG{k}{end}
+\end{Verbatim}
