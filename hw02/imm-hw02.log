@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.30)  8 OCT 2017 16:50
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.30)  8 OCT 2017 16:58
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -891,7 +891,7 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 5A828.pygtex) [11
 
 ]
-(./_minted-imm-hw02/4640CCE04C06406ED311EA95EAC503295E2FFAA78EFAC83D25F5ADA2757
+(./_minted-imm-hw02/47D086244F5B0734F344BA7B6291F54F5E2FFAA78EFAC83D25F5ADA2757
 0B2A6.pygtex)
 (./_minted-imm-hw02/DBF70722132D24BC5CE6CFC95CD05DCCE102C41C78FF9F20C6DA0AF75F5
 8C323.pygtex [12])
@@ -930,7 +930,7 @@ pk/ljfour/public/cm/dpi600/cmr8.pk> </home/imalerich/.texlive/texmf-var/fonts/p
 k/ljfour/public/cm/cmmi12.600pk> </home/imalerich/.texlive/texmf-var/fonts/pk/l
 jfour/public/cm/cmbx12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/
 dpi600/cmr12.pk>
-Output written on imm-hw02.pdf (14 pages, 108312 bytes).
+Output written on imm-hw02.pdf (14 pages, 108308 bytes).
 PDF statistics:
  445 PDF objects out of 1000 (max. 8388607)
  160 compressed objects within 2 object streams

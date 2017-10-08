@@ -6,7 +6,7 @@
 
 \PYG{c}{\PYGZpc{}\PYGZpc{} Natural Cubic Spline}
 
-\PYG{p}{[}\PYG{n}{a} \PYG{n}{b} \PYG{n}{c} \PYG{n}{d}\PYG{p}{]} \PYG{p}{=} \PYG{n}{naturalcubicspline}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{);}
+\PYG{p}{[}\PYG{n}{a} \PYG{n}{b} \PYG{n}{c} \PYG{n}{d}\PYG{p}{]} \PYG{p}{=} \PYG{n}{naturalcubicspline}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{)}
 
 \PYG{c}{\PYGZpc{}\PYGZpc{} Clamped Cubic Sline}
 

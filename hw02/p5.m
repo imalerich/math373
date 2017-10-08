@@ -5,7 +5,7 @@ y = [0 1 2];
 
 %% Natural Cubic Spline
 
-[a b c d] = naturalcubicspline(x, y);
+[a b c d] = naturalcubicspline(x, y)
 
 %% Clamped Cubic Sline
 
