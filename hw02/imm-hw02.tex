@@ -376,6 +376,34 @@ did actually increase the maximum theoretical error.
 
 \solution
 
-	TODO
+\part
+
+Using the MATLAB code included below, we can produce the coefficients for
+each of the cubic polynomials which define $S$. $S$ is then given by
+$$
+S(x) = 
+\begin{cases}
+	0 + 1x + 0x^2 + 0x^3 : 0 \leq x \leq 1\\
+	1 + 1x + 0x^2 + 0x^3 : 1 < x \leq 2\\
+\end{cases}
+$$
+
+\part
+
+Running similar code, but for the clamped cubic spline with derivatives of 1,
+produces the same result.
+$$
+S(x) = 
+\begin{cases}
+	0 + 1x + 0x^2 + 0x^3 : 0 \leq x \leq 1\\
+	1 + 1x + 0x^2 + 0x^3 : 1 < x \leq 2\\
+\end{cases}
+$$
+
+\inputminted{octave}{p5.m}
+\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}
+\inputminted{octave}{naturalcubicspline.m}
+\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}
+\inputminted{octave}{clampedcubicspline.m}
 
 \end{document}

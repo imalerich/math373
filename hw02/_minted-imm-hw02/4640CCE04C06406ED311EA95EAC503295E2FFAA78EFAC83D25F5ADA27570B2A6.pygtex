@@ -1,0 +1,16 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{k}{function} \PYG{n+nf}{p5}
+
+\PYG{n}{x} \PYG{p}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{l+m+mi}{1} \PYG{l+m+mi}{2}\PYG{p}{];}
+\PYG{n}{y} \PYG{p}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{l+m+mi}{1} \PYG{l+m+mi}{2}\PYG{p}{];}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Natural Cubic Spline}
+
+\PYG{p}{[}\PYG{n}{a} \PYG{n}{b} \PYG{n}{c} \PYG{n}{d}\PYG{p}{]} \PYG{p}{=} \PYG{n}{naturalcubicspline}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{);}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Clamped Cubic Sline}
+
+\PYG{p}{[}\PYG{n}{a} \PYG{n}{b} \PYG{n}{c} \PYG{n}{d}\PYG{p}{]} \PYG{p}{=} \PYG{n}{clampedcubicspline}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{,}\PYG{l+m+mi}{1}\PYG{p}{)}
+
+\PYG{k}{end}
+\end{Verbatim}
