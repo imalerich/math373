@@ -1,0 +1,13 @@
+\begin{Verbatim}[commandchars=\\\{\}]
+\PYG{n}{x} \PYG{p}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{l+m+mi}{1} \PYG{l+m+mi}{2}\PYG{p}{];}
+\PYG{n}{y} \PYG{p}{=} \PYG{p}{[}\PYG{l+m+mi}{0} \PYG{l+m+mi}{1} \PYG{l+m+mi}{2}\PYG{p}{];}
+\PYG{n}{v} \PYG{p}{=} \PYG{p}{[}\PYG{l+m+mi}{1} \PYG{l+m+mi}{1}\PYG{p}{];}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Natural Cubic Spline}
+\PYG{n}{p\PYGZus{}nat} \PYG{p}{=} \PYG{n}{csape}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,}\PYG{n}{y}\PYG{p}{,}\PYG{l+s}{\PYGZsq{}variational\PYGZsq{}}\PYG{p}{);}
+\PYG{n}{p\PYGZus{}nat}\PYG{p}{.}\PYG{n}{coefs} \PYG{c}{\PYGZpc{} Display the coefficients}
+
+\PYG{c}{\PYGZpc{}\PYGZpc{} Clamped Cubic Spline}
+\PYG{n}{p\PYGZus{}cla} \PYG{p}{=} \PYG{n}{csape}\PYG{p}{(}\PYG{n}{x}\PYG{p}{,} \PYG{n}{y}\PYG{p}{,} \PYG{l+s}{\PYGZsq{}clamped\PYGZsq{}}\PYG{p}{,} \PYG{n}{v}\PYG{p}{);}
+\PYG{n}{p\PYGZus{}cla}\PYG{p}{.}\PYG{n}{coefs} \PYG{c}{\PYGZpc{} Display the coefficients}
+\end{Verbatim}
