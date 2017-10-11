@@ -1,6 +1,6 @@
 # Fdb version 3
-["pdflatex"] 1507671399 "imm-hw02.tex" "imm-hw02.pdf" "imm-hw02" 1507671400
-  "/dev/null" 1507670794 0 d41d8cd98f00b204e9800998ecf8427e ""
+["pdflatex"] 1507762062 "imm-hw02.tex" "imm-hw02.pdf" "imm-hw02" 1507762063
+  "/dev/null" 1507751532 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/imalerich/texmf/tex/latex/jhwhw.cls" 1486098514 2927 1f3c37fde47172f57fc6742693fc58a3 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1501615455 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
   "/usr/share/texmf-dist/fonts/tfm/jknappen/ec/ectt1000.tfm" 1501615458 1536 06717a2b50de47d4087ac0e6cd759455 ""
@@ -134,9 +134,9 @@
   "_minted-imm-hw02/friendly.pygstyle" 1507582163 9564 fc10deaea526932d30957625b7cbeeaf ""
   "divideddifference.m" 1507582163 187 ebc7d4991ad679e871db5ac1ef6fdfee ""
   "imm-hw02.aex" 0 -1 0 ""
-  "imm-hw02.aux" 1507671400 1453 ad561fbf6182e318a18e6c7db335498b ""
-  "imm-hw02.out" 1507671399 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "imm-hw02.tex" 1507671398 13254 9cca63bad6299830c0556067d8c32b15 ""
+  "imm-hw02.aux" 1507762063 1453 ad561fbf6182e318a18e6c7db335498b ""
+  "imm-hw02.out" 1507762062 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "imm-hw02.tex" 1507762060 13644 68633349132bb5a6c16cd1dd23698894 ""
   "imm-hw02.w18" 0 -1 0 ""
   "ndd.m" 1507582163 169 ad4a4e0b9e34b71251e986382e05970a ""
   "neville.m" 1507582163 227 e6042577a40ee051e719243aafde6408 ""
@@ -146,7 +146,7 @@
   "p4b.m" 1507582163 425 61becc48e16e7b64e25d5d82a048a92f ""
   "p5.m" 1507671308 234 60589003c7b008efc3c76473db44195e ""
   (generated)
-  "imm-hw02.log"
-  "imm-hw02.aux"
   "imm-hw02.out"
+  "imm-hw02.aux"
+  "imm-hw02.log"
   "imm-hw02.pdf"
