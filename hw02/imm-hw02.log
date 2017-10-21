@@ -1,6 +1,7 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.30)  8 OCT 2017 16:58
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.26)  11 OCT 2017 22:47
 entering extended mode
  \write18 enabled.
+ file:line:error style messages enabled.
  %&-line parsing enabled.
 **imm-hw02.tex
 (./imm-hw02.tex
@@ -554,10 +555,10 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen199
 \SOUL@uldp=\dimen256
 \SOUL@ulht=\dimen257
-) (/usr/share/texmf-dist/tex/latex/minted/minted.sty
+) (/usr/share/texmf/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
-(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
-Package: fvextra 2017/07/08 v1.3.1 fvextra - extensions and patches for fancyvr
+(/usr/share/texmf/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2016/09/02 v1.2.1 fvextra - extensions and patches for fancyvr
 b
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
@@ -604,21 +605,14 @@ LaTeX Info: Redefining \\ on input line 3056.
 \FV@TmpLength=\skip75
 \c@FV@HighlightLinesStart=\count301
 \c@FV@HighlightLinesStop=\count302
-\FV@LoopCount=\count303
-\FV@NCharsBox=\box55
 \FV@BreakIndent=\dimen263
-\FV@BreakIndentNChars=\count304
 \FV@BreakSymbolSepLeft=\dimen264
-\FV@BreakSymbolSepLeftNChars=\count305
 \FV@BreakSymbolSepRight=\dimen265
-\FV@BreakSymbolSepRightNChars=\count306
 \FV@BreakSymbolIndentLeft=\dimen266
-\FV@BreakSymbolIndentLeftNChars=\count307
 \FV@BreakSymbolIndentRight=\dimen267
-\FV@BreakSymbolIndentRightNChars=\count308
-\c@FancyVerbLineBreakLast=\count309
-\FV@LineBox=\box56
-\FV@LineIndentBox=\box57
+\c@FancyVerbLineBreakLast=\count303
+\FV@LineBox=\box55
+\FV@LineIndentBox=\box56
 ) (/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 67.
@@ -635,8 +629,8 @@ runsystem(rm -- "imm-hw02.w18")...executed.
 ) (/usr/share/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texmf-dist
 /tex/generic/xstring/xstring.tex
 \@xs@message=\write4
-\integerpart=\count310
-\decimalpart=\count311
+\integerpart=\count304
+\decimalpart=\count305
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 ) (/usr/share/texmf-dist/tex/latex/framed/framed.sty
@@ -648,19 +642,19 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameSep=\dimen271
 ) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count312
+\c@float@type=\count306
 \float@exts=\toks30
-\float@box=\box58
+\float@box=\box57
 \@float@everytoks=\toks31
-\@floatcapt=\box59
+\@floatcapt=\box58
 )
 \minted@appexistsfile=\read2
-\minted@bgbox=\box60
+\minted@bgbox=\box59
 \minted@code=\write5
-\c@minted@FancyVerbLineTemp=\count313
-\c@minted@pygmentizecounter=\count314
+\c@minted@FancyVerbLineTemp=\count307
+\c@minted@pygmentizecounter=\count308
 \@float@every@listing=\toks32
-\c@listing=\count315
+\c@listing=\count309
 )
 runsystem(mkdir -p _minted-imm-hw02)...executed.
 
@@ -679,21 +673,21 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen277
 \caption@hangindent=\dimen278
 )
-\c@ContinuedFloat=\count316
+\c@ContinuedFloat=\count310
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
-\c@KVtest=\count317
+\c@KVtest=\count311
 \sf@farskip=\skip77
 \sf@captopadj=\dimen279
 \sf@capskip=\skip78
 \sf@nearskip=\skip79
-\c@subfigure=\count318
-\c@subfigure@save=\count319
-\c@lofdepth=\count320
-\c@subtable=\count321
-\c@subtable@save=\count322
-\c@lotdepth=\count323
+\c@subfigure=\count312
+\c@subfigure@save=\count313
+\c@lofdepth=\count314
+\c@subtable=\count315
+\c@subtable@save=\count316
+\c@lotdepth=\count317
 \sf@top=\skip80
 \sf@bottom=\skip81
 ) (/usr/share/texmf-dist/tex/latex/koma-script/scrextend.sty
@@ -802,16 +796,16 @@ LaTeX Font Info:    ... okay on input line 8.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count324
+\scratchcounter=\count318
 \scratchdimen=\dimen280
-\scratchbox=\box61
-\nofMPsegments=\count325
-\nofMParguments=\count326
+\scratchbox=\box60
+\nofMPsegments=\count319
+\nofMParguments=\count320
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count327
+\MPscratchCnt=\count321
 \MPscratchDim=\dimen281
-\MPnumerator=\count328
-\makeMPintoPDFobject=\count329
+\MPnumerator=\count322
+\makeMPintoPDFobject=\count323
 \everyMPtoPDFconversion=\toks40
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -828,14 +822,14 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box62
+\AtBeginShipoutBox=\box61
 Package hyperref Info: Link coloring OFF on input line 8.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count330
+\c@section@level=\count324
 )
 LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
@@ -880,60 +874,55 @@ Package amsmath Warning: Foreign command \atopwithdelims;
 
 [5] [6
 
-] [7]
-(./_minted-imm-hw02/3E5281D9CC6F1321C215DA784C7A4645E6566C94A64B08809F28BA7D8C1
-909C2.pygtex) [8]
-(./_minted-imm-hw02/0CA783A1528EDBD8CB2755D3C3661669580F1E2C8CB481236AB3449FE6B
-75B1D.pygtex [9])
-(./_minted-imm-hw02/61BECC48E16E7B64E25D5D82A048A92F33273289303F7CAEBFCA11C94E9
-58EA0.pygtex) [10]
-(./_minted-imm-hw02/820FDC63660D3D7893A975E3A15A0AE03CEE5E21F6EF4385BB014DF3228
-5A828.pygtex) [11
+] [7] [8
 
 ]
-(./_minted-imm-hw02/47D086244F5B0734F344BA7B6291F54F5E2FFAA78EFAC83D25F5ADA2757
+(./_minted-imm-hw02/3E5281D9CC6F1321C215DA784C7A4645E6566C94A64B08809F28BA7D8C1
+909C2.pygtex) [9]
+(./_minted-imm-hw02/0CA783A1528EDBD8CB2755D3C3661669580F1E2C8CB481236AB3449FE6B
+75B1D.pygtex [10])
+(./_minted-imm-hw02/61BECC48E16E7B64E25D5D82A048A92F33273289303F7CAEBFCA11C94E9
+58EA0.pygtex) [11]
+(./_minted-imm-hw02/820FDC63660D3D7893A975E3A15A0AE03CEE5E21F6EF4385BB014DF3228
+5A828.pygtex) [12
+
+]
+(./_minted-imm-hw02/60589003C7B008EFC3C76473DB44195E5E2FFAA78EFAC83D25F5ADA2757
 0B2A6.pygtex)
-(./_minted-imm-hw02/DBF70722132D24BC5CE6CFC95CD05DCCE102C41C78FF9F20C6DA0AF75F5
-8C323.pygtex [12])
-(./_minted-imm-hw02/D88D0CA3CC272100852EB63BD941EE6D080C764A87EED714234AA8B28EF
-9E61C.pygtex [13])
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 409.
-[14]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 409.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 412.
+[13]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 412.
 (./imm-hw02.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 409.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 409.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 412.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 412.
 Package rerunfilecheck Info: File `imm-hw02.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 409.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 412.
  ) 
 Here is how much of TeX's memory you used:
- 21173 strings out of 492990
- 378932 string characters out of 6138688
- 526766 words of memory out of 5000000
- 24434 multiletter control sequences out of 15000+600000
+ 21135 strings out of 492990
+ 377103 string characters out of 6138688
+ 529298 words of memory out of 5000000
+ 24403 multiletter control sequences out of 15000+600000
  536826 words of font info for 47 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,12n,45p,10422b,529s stack positions out of 5000i,500n,10000p,200000b,80000s
- </home/imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmmi6.600pk> <
-/usr/share/texmf-dist/fonts/pk/ljfour/public/cm/dpi600/cmr6.pk> </home/imaleric
-h/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmti12.600pk> </home/imalerich/.
-texlive/texmf-var/fonts/pk/ljfour/public/amsfonts/symbols/msbm10.720pk> </home/
-imalerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmex10.720pk> </home/ima
-lerich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmitt10.720pk> </home/imale
-rich/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmtt12.600pk> </home/imaleric
-h/.texlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy8.600pk> </home/imalerich/.t
-exlive/texmf-var/fonts/pk/ljfour/public/cm/cmsy10.720pk> </home/imalerich/.texl
-ive/texmf-var/fonts/pk/ljfour/public/cm/cmbx12.600pk> </home/imalerich/.texlive
-/texmf-var/fonts/pk/ljfour/public/cm/cmmi8.600pk> </usr/share/texmf-dist/fonts/
-pk/ljfour/public/cm/dpi600/cmr8.pk> </home/imalerich/.texlive/texmf-var/fonts/p
-k/ljfour/public/cm/cmmi12.600pk> </home/imalerich/.texlive/texmf-var/fonts/pk/l
-jfour/public/cm/cmbx12.720pk> </usr/share/texmf-dist/fonts/pk/ljfour/public/cm/
-dpi600/cmr12.pk>
-Output written on imm-hw02.pdf (14 pages, 108308 bytes).
+</usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
+texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb></usr/share/texmf-dist/fon
+ts/type1/public/amsfonts/cm/cmitt10.pfb></usr/share/texmf-dist/fonts/type1/publ
+ic/amsfonts/cm/cmmi12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm
+/cmmi6.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb></us
+r/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb></usr/share/texmf-d
+ist/fonts/type1/public/amsfonts/cm/cmr6.pfb></usr/share/texmf-dist/fonts/type1/
+public/amsfonts/cm/cmr8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/
+cm/cmsy10.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb><
+/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmti12.pfb></usr/share/tex
+mf-dist/fonts/type1/public/amsfonts/cm/cmtt12.pfb></usr/share/texmf-dist/fonts/
+type1/public/amsfonts/symbols/msbm10.pfb>
+Output written on imm-hw02.pdf (13 pages, 158303 bytes).
 PDF statistics:
- 445 PDF objects out of 1000 (max. 8388607)
- 160 compressed objects within 2 object streams
- 53 named destinations out of 1000 (max. 500000)
+ 170 PDF objects out of 1000 (max. 8388607)
+ 139 compressed objects within 2 object streams
+ 52 named destinations out of 1000 (max. 500000)
  1 words of extra memory for PDF output out of 10000 (max. 10000000)
 
