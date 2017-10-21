@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1508621817 "imm-hw03.tex" "imm-hw03.pdf" "imm-hw03" 1508621817
+["pdflatex"] 1508622964 "imm-hw03.tex" "imm-hw03.pdf" "imm-hw03" 1508622964
   "/dev/null" 1508617293 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/imalerich/texmf/tex/latex/jhwhw.cls" 1504148591 2927 1f3c37fde47172f57fc6742693fc58a3 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1501615455 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -22,14 +22,6 @@
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy10.tfm" 1501615461 1124 6c73e740cf17375f03eec0ee63599741 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy6.tfm" 1501615461 1116 933a60c408fc0a863a92debe84b2d294 ""
   "/usr/share/texmf-dist/fonts/tfm/public/cm/cmsy8.tfm" 1501615461 1120 8b7d695260f3cff42e636090a8002094 ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb" 1501615453 32080 340ef9bf63678554ee606688e7b5339d ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmex10.pfb" 1501615453 30251 6afa5cb1d0204815a708a080681d4674 ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi12.pfb" 1501615453 36741 fa121aac0049305630cf160b86157ee4 ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmmi8.pfb" 1501615453 35469 70d41d2b9ea31d5d813066df7c99281c ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr12.pfb" 1501615453 32722 d7379af29a190c3f453aba36302ff5a9 ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb" 1501615453 32726 0a1aea6fcd6468ee2cf64d891f5c43c8 ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb" 1501615453 32569 5e5ddc8df908dea60932f3c484a54c0d ""
-  "/usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy8.pfb" 1501615453 32626 4f5c1b83753b1dd3a97d1b399a005b4b ""
   "/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii" 1501615477 71627 94eb9990bed73c364d7f53f960cc8c5b ""
   "/usr/share/texmf-dist/tex/generic/ifxetex/ifxetex.sty" 1501615467 1458 43ab4710dc82f3edeabecd0d099626b2 ""
   "/usr/share/texmf-dist/tex/generic/oberdiek/catchfile.sty" 1501615467 8493 e586100f117d095256a1a5c630c3fa25 ""
@@ -112,9 +104,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1507666866 2374995 888b02ebb58d1f1bdf5c344bfe2d5f8e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1504143230 7735972 bcc6eabf5510b8c689b80250643af97b ""
   "imm-hw03.aex" 0 -1 0 ""
-  "imm-hw03.aux" 1508621783 698 05765578107eeca811bdbbca0ec02cd2 ""
-  "imm-hw03.out" 1508621782 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "imm-hw03.tex" 1508621816 4248 01a54340c27033ae5471881c1c536ca7 ""
+  "imm-hw03.aux" 1508622957 698 05765578107eeca811bdbbca0ec02cd2 ""
+  "imm-hw03.out" 1508622957 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "imm-hw03.tex" 1508622963 4659 1327bd4a033950ed147bed3e2213dd00 ""
   "imm-hw03.w18" 0 -1 0 ""
   "p1.png" 1508621318 18165 b122d68d8c93de631815f3e6f1e14aec ""
   (generated)
