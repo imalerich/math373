@@ -267,7 +267,90 @@
 
 \solution
 
-	TODO
+	\part
+
+	First, note that we will have 4 zeros of $T_4$ given by $\cos(\frac{2k-1}{2n}\pi)$.
+	These are the values $x_0 = \{0.92388, 0.38268, -0.38268, -0.92366\}$.
+	Evaluating our function at these points produces $f(x_0) = \{2.51904, 1.46621, 0.68203, 0.39698\}$.
+	Next we set up our linear equation to find the coefficients of our polynomial.
+
+	\bigbreak
+	\left[\begin{array}{cccc}
+		0.92388^3 & 0.92388^2 & 0.92388 & 1 \\
+		0.38268^3 & 0.38268^2 & 0.38268 & 1 \\
+		-0.38268^3 & -0.38268^2 & -0.38268 & 1 \\
+		-0.92388^3 & -0.92388^2 & -0.92388 & 1 \\
+	\end{array} \right]
+	\left[\begin{array}{c}
+		a \\ b \\ c \\ d \\
+	\end{array} \right] =
+	\left[\begin{array}{c}
+		2.51904 \\ 1.46621 \\ 0.68203 \\ 0.39696 \\
+	\end{array} \right]
+
+	\bigbreak
+	Solving this yields
+	\bigbreak
+	\left[\begin{array}{c}
+		a \\ b \\ c \\ d \\
+	\end{array} \right] =
+	\left[\begin{array}{c}
+		0.17518 \\ 0.54290 \\ 0.99893 \\ 0.99462 \\
+	\end{array} \right] \bigbreak
+	Which produces the 4th degree polynomial $0.17518x^3 + 0.54290x^2 + 0.99893x + 0.99462$. \\
+	To find an upper bound for the error on the bounds I simply need to solve
+	$$
+		\text{max}_{-1,1}(|0.17518x^3 + 0.54290x^2 + 0.99893x + 0.99462 - e^x|)
+	$$
+	This occurs at $x=1$ which evaluates to an error of $e - \frac{271163}{100000} \approx 0.00665183$.
+
+	\clearpage
+	Once printed out you may not be able to see $e^x$ below the interpolating polynomial,
+	clearly this method is doing a pretty decent job of approximating on the given bounds.
+	\includegraphics[scale=0.75]{p3}
+
+	\part
+	We can follow the same process as part a, but instead use the 4 zeros given by 
+	$1 + \cos(\frac{2k-1}{2n}\pi)$. These are the zeros 
+	$x_0 = \{1.923880, 1.382683, 0.617317, 0.076120\}$. Evaluating our function at these
+	points produces $f(x_0) = \{6.8475, 3.9856, 1.8539, 1.0791\}$. Again, we set up
+	and solve our linear equation to find the coefficients of our polynomial.
+
+	\bigbreak
+	\left[\begin{array}{cccc}
+		1.92388^3 & 1.92388^2 & 1.92388 & 1 \\
+		1.38268^3 & 1.38268^2 & 1.38268 & 1 \\
+		0.617317^3 & 0.617317^2 & 0.617317 & 1 \\
+		0.076120^3 & 0.076120^2 & 0.076120 & 1 \\
+	\end{array} \right]
+	\left[\begin{array}{c}
+		a \\ b \\ c \\ d \\
+	\end{array} \right] =
+	\left[\begin{array}{c}
+		6.8475 \\ 3.9856 \\ 1.8539 \\ 1.0791 \\
+	\end{array} \right]
+
+	\bigbreak
+	Solving this yields
+	\bigbreak
+	\left[\begin{array}{c}
+		a \\  b \\  c \\ d \\
+	\end{array} \right] =
+	\left[\begin{array}{c}
+		0.476177 \\ 0.047226 \\ 1.192398 \\ 0.987843 \\
+	\end{array} \right] \bigbreak
+
+	\bigbreak
+	Which gives us the polynomial $0.476177x^3 + 0.047226x + 1.192398x + 0.987843$.
+	To find an upper bound for the error on the bounds I simply need to solve
+	$$
+		\text{max}_{0,2}(|0.476177x^3 + 0.047226x + 1.192398x + 0.987843 - e^x|)
+	$$
+	This occurs at $x=2$ which evaluates to an error of $e^2 - \frac{1474191}{200000} \approx 0.018101$.
+	We can see that as $e^x$ starts to blow up, our polynomial will obviously start to perform worse
+	relative to the bounds of part (a).
+
+	\includegraphics[scale=0.75]{p3b}
 
 %% Problem 4
 \problem{} (20 points)
