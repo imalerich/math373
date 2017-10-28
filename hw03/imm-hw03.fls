@@ -231,6 +231,15 @@ INPUT ./p4b.png
 INPUT p4c.png
 INPUT ./p4c.png
 INPUT ./p4c.png
+INPUT p5a.png
+INPUT ./p5a.png
+INPUT ./p5a.png
+INPUT p5b.png
+INPUT ./p5b.png
+INPUT ./p5b.png
+INPUT p5c.png
+INPUT ./p5c.png
+INPUT ./p5c.png
 INPUT imm-hw03.aux
 INPUT ./imm-hw03.out
 INPUT ./imm-hw03.out

@@ -1,5 +1,5 @@
 # Fdb version 3
-["pdflatex"] 1509223732 "imm-hw03.tex" "imm-hw03.pdf" "imm-hw03" 1509223732
+["pdflatex"] 1509226837 "imm-hw03.tex" "imm-hw03.pdf" "imm-hw03" 1509226837
   "/dev/null" 1509220012 0 d41d8cd98f00b204e9800998ecf8427e ""
   "/home/imalerich/texmf/tex/latex/jhwhw.cls" 1504148591 2927 1f3c37fde47172f57fc6742693fc58a3 ""
   "/usr/share/texmf-dist/fonts/map/fontname/texfonts.map" 1501615455 3287 e6b82fe08f5336d4d5ebc73fb1152e87 ""
@@ -112,9 +112,9 @@
   "/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map" 1507666866 2374995 888b02ebb58d1f1bdf5c344bfe2d5f8e ""
   "/var/lib/texmf/web2c/pdftex/pdflatex.fmt" 1504143230 7735972 bcc6eabf5510b8c689b80250643af97b ""
   "imm-hw03.aex" 0 -1 0 ""
-  "imm-hw03.aux" 1509223673 698 05765578107eeca811bdbbca0ec02cd2 ""
-  "imm-hw03.out" 1509223673 0 d41d8cd98f00b204e9800998ecf8427e ""
-  "imm-hw03.tex" 1509223730 12775 56e9dadb0e8d60951e2dbd6385896e32 ""
+  "imm-hw03.aux" 1509226771 698 05765578107eeca811bdbbca0ec02cd2 ""
+  "imm-hw03.out" 1509226770 0 d41d8cd98f00b204e9800998ecf8427e ""
+  "imm-hw03.tex" 1509226835 14970 038b48e4a4b2d287a4d8bf242a41e7e9 ""
   "imm-hw03.w18" 0 -1 0 ""
   "p1.png" 1508621318 18165 b122d68d8c93de631815f3e6f1e14aec ""
   "p2.png" 1508624858 18819 74bf36f7704e218c1afd556251e2476d ""
@@ -124,6 +124,9 @@
   "p4a.png" 1509222847 18948 b212fcfd5017968b37223a3407b5926f ""
   "p4b.png" 1509223213 19161 e93ea4caca662f028ebd512f73e84505 ""
   "p4c.png" 1509223709 19404 327ed79b7f0728108e1176cebaea2116 ""
+  "p5a.png" 1509224232 16294 e8a77999dee511959252cd80294af36d ""
+  "p5b.png" 1509224364 15831 2613898bd0f5bd1ac882530879ba08e6 ""
+  "p5c.png" 1509224414 20142 aea6134ea877f86eec949e0ea2ed47eb ""
   (generated)
   "imm-hw03.pdf"
   "imm-hw03.log"

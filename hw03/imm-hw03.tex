@@ -93,7 +93,7 @@
 	almost linear, but not quite. From both the graph below, and the error above,
 	the polynomial is clearly doing a good job (though not perfect) of fitting to
 	the points.
-	\includegraphics[scale=0.75]{p1}
+	$$\includegraphics[scale=0.75]{p1}$$
 
 %% Problem 2
 \problem{} (20 points)
@@ -186,7 +186,7 @@
 	From the graph below, we can see that the interpolating polynomial closely matches,
 	but diverges slightly from $e^x$. Notably, the polynomial switches from 
 	underestimating to overestimating after crossing $x=0$.
-	\includegraphics[scale=0.75]{p2}
+	$$\includegraphics[scale=0.75]{p2}$$
 
 	\part
 
@@ -250,7 +250,7 @@
 	of approximating $e^x$ on our given bounds. It appears to be more consistent
 	and accurate than the least squares polynomial 
 	but with greater error towards the end points.
-	\includegraphics[scale=0.75]{p2b}
+	$$\includegraphics[scale=0.75]{p2b}$$
 
 %% Problem 3
 \problem{} (20 points)
@@ -307,7 +307,7 @@
 	\clearpage
 	Once printed out you may not be able to see $e^x$ below the interpolating polynomial,
 	clearly this method is doing a pretty decent job of approximating on the given bounds.
-	\includegraphics[scale=0.75]{p3}
+	$$\includegraphics[scale=0.75]{p3}$$
 
 	\part
 	We can follow the same process as part a, but instead use the 4 zeros given by 
@@ -350,7 +350,7 @@
 	We can see that as $e^x$ starts to blow up, our polynomial will obviously start to perform worse
 	relative to the bounds of part (a).
 
-	\includegraphics[scale=0.75]{p3b}
+	$$\includegraphics[scale=0.75]{p3b}$$
 
 %% Problem 4
 \problem{} (20 points)
@@ -372,7 +372,7 @@
 	\end{align*}
 	We can graph this to see how well of an approximation this is. We know from the
 	MATLAB code provided on the course page our error is about $0.15604$. \\
-	\includegraphics[scale=0.75]{p4a}
+	$$\includegraphics[scale=0.75]{p4a}$$
 
 	\clearpage
 	\textbf{(n=1, m=1)} \\
@@ -385,7 +385,7 @@
 	\end{align*}
 	We can graph this to see how well of an approximation we have. From the MATLAB
 	code we can see an error of $0.047232$ a significant improvement over the first case.
-	\includegraphics[scale=0.75]{p4b}
+	$$\includegraphics[scale=0.75]{p4b}$$
 
 	\clearpage
 	\textbf{(n=2, m=0)} \\
@@ -414,6 +414,71 @@
 
 \solution
 
-	TODO
+	\part
+	Working with the provided MATLAB code, we have following vectors to use
+	to build our trigonometric polynomial (note we do not need $b(3)$): 
+	$$a_0 = 7.3522, a=[-3.67608, 1.47043, -0.73522], b=[3.6761, -2.9409]$$
+	We can then follow the codes example to build the trigonometric polynomial.
+	\begin{align*}
+		S_3(x) &= \frac{a0}{2} + \cos(xk)a + \sin(xk(1:n-1))b \\
+		&= 3.6761 - 3.67608\cos(x) + 1.47043\cos(2x) - 0.73522\cos(3x) \\ 
+		&\ \ 3.6761\sin(x) - 2.9440\sin(2x) \\
+	\end{align*}
+	$$\includegraphics[scale=0.6]{p5a}$$
+
+	\part
+	We follow a similar process here, first we have the following vectors
+	derived from the code:
+	$$a_0 = 5.5946, a=[-1.92077, -0.27774, 0.99998], b=[3.5097, -2.6036]$$
+	We can then follow the codes example to build the trigonometric polynomial.
+	\begin{align*}
+		S_{3,6}(x) &= \frac{a0}{2} + \cos(xk)a + \sin(xk(1:n-1))b \\
+		&= 2.7973 - 1.92077\cos(x) - 0.27774\cos(2x) + 0.99998\cos(3x) \\
+		&\ \ 3.5097\sin(x) - 2.6036\sin(2x) \\
+	\end{align*}
+	$$\includegraphics[scale=0.6]{p5b}$$
+
+	\part
+	This polynomial is obviously the most complex, but we can follow the same
+	approach as before to derive it from the MATLAB code.
+	Letting MATLAB run it's initial computations, we arrive at the following
+	set of vectors which will be used to construct the trigonometric interpolating
+	polynomial $S_8(x)$. \\
+
+	\begin{align*}
+		aa_0 &=  6.0028 \\
+		aa_n &= -1.16373 \\
+		aa &= [ -2.32745, 0.12403, 0.60729, -0.90414, 1.04546, -1.11782, 1.15309 ] \\
+		bb &= [3.58208, -2.75145, 1.91784, -1.33901, 0.91301, -0.57180, 0.27595 ]
+	\end{align*}
+
+	\clearpage
+	Where $S_8(x)$ is given by 
+	$$
+		\frac{aa_0}{2} + \frac{aa_n}{2\cos(nx)} + 
+		\cos(xk(1:n-1))aa +
+		\sin(xk(1:n-1))bb
+	$$
+
+	Putting these together yields
+	\begin{align*}
+		S_8(x) &= 3.0014 + \frac{-1.16373}{2\cos(8x)} + 
+		-2.32745\cos(x) +
+		0.12403\cos(2x) +
+		0.60729\cos(3x) + \\
+		&\ \ -0.90414\cos(4x) +
+		1.04546\cos(5x) +
+		-1.11782\cos(6x) +
+		1.15309\cos(7x) + \\
+		&\ \ 3.58208\sin(x) +
+		-2.75145\sin(2x) +
+		1.91784\sin(3x) +
+		-1.33901\sin(4x) + \\
+		&\ \ 0.91301\sin(5x) +
+		-0.57180\sin(6x) +
+		0.27595\sin(7x) +
+	\end{align*}
+
+	$$\includegraphics[scale=0.75]{p5c}$$
 
 \end{document}
