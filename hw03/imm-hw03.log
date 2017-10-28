@@ -1,7 +1,6 @@
-This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.26)  26 OCT 2017 22:46
+This is pdfTeX, Version 3.14159265-2.6-1.40.18 (TeX Live 2017/Arch Linux) (preloaded format=pdflatex 2017.8.30)  28 OCT 2017 15:48
 entering extended mode
  \write18 enabled.
- file:line:error style messages enabled.
  %&-line parsing enabled.
 **imm-hw03.tex
 (./imm-hw03.tex
@@ -555,10 +554,10 @@ Package: soul 2003/11/17 v2.4 letterspacing/underlining (mf)
 \SOUL@ttwidth=\dimen199
 \SOUL@uldp=\dimen256
 \SOUL@ulht=\dimen257
-) (/usr/share/texmf/tex/latex/minted/minted.sty
+) (/usr/share/texmf-dist/tex/latex/minted/minted.sty
 Package: minted 2017/07/19 v2.5 Yet another Pygments shim for LaTeX
-(/usr/share/texmf/tex/latex/fvextra/fvextra.sty
-Package: fvextra 2016/09/02 v1.2.1 fvextra - extensions and patches for fancyvr
+(/usr/share/texmf-dist/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2017/07/08 v1.3.1 fvextra - extensions and patches for fancyvr
 b
 (/usr/share/texmf-dist/tex/latex/etoolbox/etoolbox.sty
 Package: etoolbox 2017/01/02 v2.4 e-TeX tools for LaTeX (JAW)
@@ -605,14 +604,21 @@ LaTeX Info: Redefining \\ on input line 3056.
 \FV@TmpLength=\skip75
 \c@FV@HighlightLinesStart=\count301
 \c@FV@HighlightLinesStop=\count302
+\FV@LoopCount=\count303
+\FV@NCharsBox=\box55
 \FV@BreakIndent=\dimen263
+\FV@BreakIndentNChars=\count304
 \FV@BreakSymbolSepLeft=\dimen264
+\FV@BreakSymbolSepLeftNChars=\count305
 \FV@BreakSymbolSepRight=\dimen265
+\FV@BreakSymbolSepRightNChars=\count306
 \FV@BreakSymbolIndentLeft=\dimen266
+\FV@BreakSymbolIndentLeftNChars=\count307
 \FV@BreakSymbolIndentRight=\dimen267
-\c@FancyVerbLineBreakLast=\count303
-\FV@LineBox=\box55
-\FV@LineIndentBox=\box56
+\FV@BreakSymbolIndentRightNChars=\count308
+\c@FancyVerbLineBreakLast=\count309
+\FV@LineBox=\box56
+\FV@LineIndentBox=\box57
 ) (/usr/share/texmf-dist/tex/latex/tools/shellesc.sty
 Package: shellesc 2016/06/07 v0.02a unified shell escape interface for LaTeX
 Package shellesc Info: Unrestricted shell escape enabled on input line 67.
@@ -629,8 +635,8 @@ runsystem(rm -- "imm-hw03.w18")...executed.
 ) (/usr/share/texmf-dist/tex/generic/xstring/xstring.sty (/usr/share/texmf-dist
 /tex/generic/xstring/xstring.tex
 \@xs@message=\write4
-\integerpart=\count304
-\decimalpart=\count305
+\integerpart=\count310
+\decimalpart=\count311
 )
 Package: xstring 2013/10/13  v1.7c  String manipulations (C Tellechea)
 ) (/usr/share/texmf-dist/tex/latex/framed/framed.sty
@@ -642,19 +648,19 @@ Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
 \FrameSep=\dimen271
 ) (/usr/share/texmf-dist/tex/latex/float/float.sty
 Package: float 2001/11/08 v1.3d Float enhancements (AL)
-\c@float@type=\count306
+\c@float@type=\count312
 \float@exts=\toks30
-\float@box=\box57
+\float@box=\box58
 \@float@everytoks=\toks31
-\@floatcapt=\box58
+\@floatcapt=\box59
 )
 \minted@appexistsfile=\read2
-\minted@bgbox=\box59
+\minted@bgbox=\box60
 \minted@code=\write5
-\c@minted@FancyVerbLineTemp=\count307
-\c@minted@pygmentizecounter=\count308
+\c@minted@FancyVerbLineTemp=\count313
+\c@minted@pygmentizecounter=\count314
 \@float@every@listing=\toks32
-\c@listing=\count309
+\c@listing=\count315
 )
 runsystem(mkdir -p _minted-imm-hw03)...executed.
 
@@ -673,21 +679,21 @@ Package caption3 Info: TeX engine: e-TeX on input line 67.
 \caption@parindent=\dimen277
 \caption@hangindent=\dimen278
 )
-\c@ContinuedFloat=\count310
+\c@ContinuedFloat=\count316
 Package caption Info: float package is loaded.
 Package caption Info: hyperref package is loaded.
 )
-\c@KVtest=\count311
+\c@KVtest=\count317
 \sf@farskip=\skip77
 \sf@captopadj=\dimen279
 \sf@capskip=\skip78
 \sf@nearskip=\skip79
-\c@subfigure=\count312
-\c@subfigure@save=\count313
-\c@lofdepth=\count314
-\c@subtable=\count315
-\c@subtable@save=\count316
-\c@lotdepth=\count317
+\c@subfigure=\count318
+\c@subfigure@save=\count319
+\c@lofdepth=\count320
+\c@subtable=\count321
+\c@subtable@save=\count322
+\c@lotdepth=\count323
 \sf@top=\skip80
 \sf@bottom=\skip81
 ) (/usr/share/texmf-dist/tex/latex/koma-script/scrextend.sty
@@ -796,16 +802,16 @@ LaTeX Font Info:    ... okay on input line 8.
 
 (/usr/share/texmf-dist/tex/context/base/mkii/supp-pdf.mkii
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count318
+\scratchcounter=\count324
 \scratchdimen=\dimen280
-\scratchbox=\box60
-\nofMPsegments=\count319
-\nofMParguments=\count320
+\scratchbox=\box61
+\nofMPsegments=\count325
+\nofMParguments=\count326
 \everyMPshowfont=\toks39
-\MPscratchCnt=\count321
+\MPscratchCnt=\count327
 \MPscratchDim=\dimen281
-\MPnumerator=\count322
-\makeMPintoPDFobject=\count323
+\MPnumerator=\count328
+\makeMPintoPDFobject=\count329
 \everyMPtoPDFconversion=\toks40
 ) (/usr/share/texmf-dist/tex/latex/oberdiek/epstopdf-base.sty
 Package: epstopdf-base 2016/05/15 v2.6 Base part for package epstopdf
@@ -822,14 +828,14 @@ G,.JBIG2,.JB2,.eps]
 File: epstopdf-sys.cfg 2010/07/13 v1.3 Configuration of (r)epstopdf for TeX Liv
 e
 ))
-\AtBeginShipoutBox=\box61
+\AtBeginShipoutBox=\box62
 Package hyperref Info: Link coloring OFF on input line 8.
 (/usr/share/texmf-dist/tex/latex/hyperref/nameref.sty
 Package: nameref 2016/05/21 v2.44 Cross-referencing by name of section
 (/usr/share/texmf-dist/tex/generic/oberdiek/gettitlestring.sty
 Package: gettitlestring 2016/05/16 v1.5 Cleanup title references (HO)
 )
-\c@section@level=\count324
+\c@section@level=\count330
 )
 LaTeX Info: Redefining \ref on input line 8.
 LaTeX Info: Redefining \pageref on input line 8.
@@ -849,7 +855,7 @@ LaTeX Font Info:    Try loading font information for U+msb on input line 16.
 (/usr/share/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
-./imm-hw03.tex:26: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.26 	\left
@@ -857,7 +863,7 @@ l.26 	\left
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./imm-hw03.tex:38: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.38 
@@ -865,7 +871,7 @@ l.38
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./imm-hw03.tex:71: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.71 	\end{align*}
@@ -874,7 +880,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:71: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.71 	\end{align*}
@@ -883,7 +889,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:71: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.71 	\end{align*}
@@ -892,7 +898,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:71: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.71 	\end{align*}
@@ -901,7 +907,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:71: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.71 	\end{align*}
@@ -910,7 +916,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:71: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.71 	\end{align*}
@@ -928,7 +934,7 @@ Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
 [1{/var/lib/texmf/fonts/map/pdftex/updmap/pdftex.map}
 
 ] [2 <./p1.png>]
-./imm-hw03.tex:128: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.128 		\frac{1}{e} &
@@ -937,7 +943,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:128: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.128 		\frac{1}{e} & 1 &
@@ -946,7 +952,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:164: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.164 	\end{align*}
@@ -955,7 +961,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:164: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.164 	\end{align*}
@@ -964,7 +970,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:164: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.164 	\end{align*}
@@ -973,7 +979,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:164: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.164 	\end{align*}
@@ -982,7 +988,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:164: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.164 	\end{align*}
@@ -991,7 +997,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:164: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.164 	\end{align*}
@@ -1000,7 +1006,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:164: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.164 	\end{align*}
@@ -1009,7 +1015,7 @@ You have given more \span or & marks than there were
 in the preamble to the \halign or \valign now in progress.
 So I'll assume that you meant to type \cr instead.
 
-./imm-hw03.tex:164: Extra alignment tab has been changed to \cr.
+! Extra alignment tab has been changed to \cr.
 <recently read> \endtemplate 
                              
 l.164 	\end{align*}
@@ -1025,7 +1031,7 @@ Package pdftex.def Info: p2.png  used on input line 189. on input line 189.
 Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
  189.
 [3] [4 <./p2.png>]
-./imm-hw03.tex:242: Undefined control sequence.
+! Undefined control sequence.
 <recently read> \integral 
                           
 l.242 ...rror over the bounds by taking $\integral
@@ -1045,7 +1051,7 @@ Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
 [5
 
  <./p2b.png>]
-./imm-hw03.tex:278: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.278 	\left
@@ -1053,7 +1059,7 @@ l.278 	\left
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./imm-hw03.tex:290: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.290 
@@ -1061,7 +1067,7 @@ l.290
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./imm-hw03.tex:294: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.294 	\left
@@ -1069,7 +1075,7 @@ l.294 	\left
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./imm-hw03.tex:299: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.299 	\end{array} \right] \bigbreak
@@ -1084,7 +1090,7 @@ File: p3.png Graphic file (type png)
 Package pdftex.def Info: p3.png  used on input line 310. on input line 310.
 Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
  310.
-./imm-hw03.tex:320: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.320 	\left
@@ -1092,7 +1098,7 @@ l.320 	\left
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./imm-hw03.tex:332: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.332 
@@ -1100,7 +1106,7 @@ l.332
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./imm-hw03.tex:336: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.336 	\left
@@ -1108,7 +1114,7 @@ l.336 	\left
 I've inserted a begin-math/end-math symbol since I think
 you left one out. Proceed, with fingers crossed.
 
-./imm-hw03.tex:341: Missing $ inserted.
+! Missing $ inserted.
 <inserted text> 
                 $
 l.341 	\end{array} \right] \bigbreak
@@ -1125,23 +1131,48 @@ File: p3b.png Graphic file (type png)
 Package pdftex.def Info: p3b.png  used on input line 353. on input line 353.
 Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
  353.
-[8 <./p3b.png>] [9]
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 380.
-[10]
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 380.
+[8 <./p3b.png>]
+<p4a.png, id=65, 578.16pt x 433.62pt>
+File: p4a.png Graphic file (type png)
+<use p4a.png>
+Package pdftex.def Info: p4a.png  used on input line 375. on input line 375.
+Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
+ 375.
+[9 <./p4a.png>]
+<p4b.png, id=72, 578.16pt x 433.62pt>
+File: p4b.png Graphic file (type png)
+<use p4b.png>
+Package pdftex.def Info: p4b.png  used on input line 388. on input line 388.
+Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
+ 388.
+[10
+
+ <./p4b.png>]
+<p4c.png, id=77, 578.16pt x 433.62pt>
+File: p4c.png Graphic file (type png)
+<use p4c.png>
+Package pdftex.def Info: p4c.png  used on input line 401. on input line 401.
+Package pdftex.def Info: Requested size: 433.61893pt x 325.2142pt on input line
+ 401.
+[11
+
+ <./p4c.png>]
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 419.
+[12]
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 419.
 (./imm-hw03.aux)
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 380.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 380.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 419.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 419.
 Package rerunfilecheck Info: File `imm-hw03.out' has not changed.
 (rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
-Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 380.
+Package atveryend Info: Empty hook `AtVeryVeryEnd' on input line 419.
  ) 
 Here is how much of TeX's memory you used:
- 20858 strings out of 492990
- 368374 string characters out of 6138688
- 525591 words of memory out of 5000000
- 24178 multiletter control sequences out of 15000+600000
- 536311 words of font info for 45 fonts, out of 8000000 for 9000
+ 20896 strings out of 492990
+ 369125 string characters out of 6138688
+ 525913 words of memory out of 5000000
+ 24212 multiletter control sequences out of 15000+600000
+ 536142 words of font info for 44 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  46i,15n,45p,10422b,335s stack positions out of 5000i,500n,10000p,200000b,80000s
 </usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmbx12.pfb></usr/share/
@@ -1151,10 +1182,10 @@ c/amsfonts/cm/cmmi8.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/c
 mr12.pfb></usr/share/texmf-dist/fonts/type1/public/amsfonts/cm/cmr8.pfb></usr/s
 hare/texmf-dist/fonts/type1/public/amsfonts/cm/cmsy10.pfb></usr/share/texmf-dis
 t/fonts/type1/public/amsfonts/cm/cmsy8.pfb>
-Output written on imm-hw03.pdf (10 pages, 152411 bytes).
+Output written on imm-hw03.pdf (12 pages, 193682 bytes).
 PDF statistics:
- 115 PDF objects out of 1000 (max. 8388607)
- 89 compressed objects within 1 object stream
- 32 named destinations out of 1000 (max. 500000)
- 26 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 126 PDF objects out of 1000 (max. 8388607)
+ 95 compressed objects within 1 object stream
+ 34 named destinations out of 1000 (max. 500000)
+ 41 words of extra memory for PDF output out of 10000 (max. 10000000)
 

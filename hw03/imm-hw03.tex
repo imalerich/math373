@@ -359,7 +359,46 @@
 
 \solution
 
-	TODO
+	From the sample code posted on the class page we can derive these pretty easily. \\
+	As noted in the code there are three possible cases.
+
+	\bigbreak
+	\textbf{(n=0, m=2)} \\
+	Here we have the vectors $p=[0.79040]$ and $q=[1, 0.88911, 0.19759]$. \\
+	Our polynomial then takes the form... \\
+	\begin{align*}
+		\frac{T_{0,n}(x) p}{T_{0,m}(x) q} &= \frac{0.79040}{1 + 0.88911x + (2x^2-1)0.19759} \\
+		&= \frac{0.79040}{0.39518x^2 + 0.8891x + 0.80241}
+	\end{align*}
+	We can graph this to see how well of an approximation this is. We know from the
+	MATLAB code provided on the course page our error is about $0.15604$. \\
+	\includegraphics[scale=0.75]{p4a}
+
+	\clearpage
+	\textbf{(n=1, m=1)} \\
+	Again, using the sample code provided on the class page, we have
+	the vectors $p=[1, -0.48232]$ and $q=[1, 0.46626]$. \\
+	Our polynomial then takes the form... \\
+	\begin{align*}
+		\frac{T_{0,n}(x)p}{T_{0,m}(x)q} &= \frac{1 - 0.48232x}{1 + 0.44626x} \\
+		&= \frac{4.66276}{x + 2.24085} - 1.0808\\
+	\end{align*}
+	We can graph this to see how well of an approximation we have. From the MATLAB
+	code we can see an error of $0.047232$ a significant improvement over the first case.
+	\includegraphics[scale=0.75]{p4b}
+
+	\clearpage
+	\textbf{(n=2, m=0)} \\
+	In the final case, we have the vectors
+	$p=[1.26607, -1.13032, 0.27150]$ and $q=[1]$.
+	Giving us the polynomial... \\
+	\begin{align*}
+		\frac{T_{0,n}p}{T_{0,m}q} &= \frac{1.26607 - 1.13032x + 0.27150(2x^2-1)}{1} \\
+		&= 0.543x^2 - 1.13032x + 0.99457 \\
+	\end{align*}
+	The graph of which is included below, from the MATLAB code we see it has an error
+	of $0.050402$, slightly worse than the error of the second case.
+	\includegraphics[scale=0.75]{p4c}
 
 %% Problem 5
 \problem{} (30 points) (Use MATLAB routines on classpage)
