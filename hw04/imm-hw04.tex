@@ -1,0 +1,165 @@
+\documentclass[10pt]{jhwhw}
+\author{Ian Malerich}
+\title{Math S 373: Homework 4}
+\usepackage{amssymb, amsfonts, amsmath, mathtools, graphicx, breqn, soul}
+\usepackage{minted, subfig, float, scrextend, setspace, amsthm}
+\usemintedstyle{friendly}
+
+\begin{document}
+\raggedright
+
+%% Problem 1
+\problem{} (30 points)
+
+	\begin{enumerate}
+		\item Use the forward-difference and backward-difference formulas to determine each missing entry
+			in the following table with $f(x) = \sin x$, compute the errors and find error
+			bounds using error formulas. \\
+		\item Choose your favorite function $f$, nonzero number $x$.
+			Generate approximations of $f'_n(x)$ to $f'(x)$ by
+			$$
+				f'_n(x) = \frac{f(x + 10^{-n}) - f(x)}{10^{-n}}
+			$$
+			for $n = 1,2,\ldots,10$ and describe what happens.
+	\end{enumerate}
+
+\solution
+
+\part
+	$$
+	\begin{tabular}{|c|c|c|}
+		\hline
+		$x$ & $f(x)$ & $f'(x)$ \\ \hline
+		0.5 & 0.4794 & \\ \hline
+		0.6 & 0.5646 & \\ \hline
+		0.7 & 0.6442 & \\ \hline
+	\end{tabular}
+	$$
+
+\part
+
+%% Problem 2
+\problem{} (60 points)
+
+	\begin{enumerate}
+		\item Approximate the following integral using the Trapezoidal rule, find a bound for the
+			error using error formula and compare this to the actual error:
+			$$
+				\int_{0.5}^{1} x^4 dx.
+			$$
+		\item Repeat part (a) using Simpson's rule.
+		\item Repeat part (a) using Composite Trapezoidal rule with $n=4$.
+		\item Repeat part (a) using Composite Simpson rule with $n=4$.
+		\item Write a code to implement part (c) and (d) in MATLAB.
+		\item Write a function $v = $ CompositeTrapezoidalRule($f,a,b,n$) to implement
+			Composite trapezoidal rule with a given $n$ for
+			$$
+				\int_a^b f(x) dx,
+			$$
+			verify your code with part (c).
+	\end{enumerate}
+
+\solution
+
+%% Problem 3
+\problem{} (20 points)
+
+	\begin{enumerate}
+		\item Show that the following quadrature formula has a degree of precision equal to 3,
+			$$
+				\int_{-1}^{1} f(x) dx = f(-\frac{\sqrt{3}}{3}) + f(\frac{\sqrt{3}}{3}).
+			$$
+		\item Approximate the following integral using Gaussian quadrature with $n= 2,3,5$,
+			$$
+				\int_1^{1.5} x^2 \ln x dx
+			$$
+	\end{enumerate}
+
+\solution
+
+%% Problem 4
+\problem{} (20 points)
+
+	\begin{enumerate}
+		\item Use Composite Simpson rule with $n=4$ to approximate the following integral
+			$$
+				\int_0^1 x^{-1/4} \sin xdx
+			$$
+		\item Use Composite Simpson rule with $n=6$ to approximate the following integral
+			$$
+				\int_1^{\infty} \frac{\cos x}{x^3} dx
+			$$
+	\end{enumerate}
+
+\solution
+
+%% Problem 5
+\problem{} (30 points)
+
+	\begin{enumerate}
+		\item Use the Gaussian Elimination with Backward substitution to solve the following
+			linear system (must show intermediate steps).
+			\begin{alignat*}{2}
+				2x_1 &- 1.5x_2 &+ 3x_3 &= 1 \\
+				-x_1 &         &+ 2x_3 &= 3 \\
+				4x_1 &- 4.5x_2 &+ 5x_3 &= 1 \\
+			\end{alignat*}
+		\item Repeat (a) using the Gaussian Elimination with partial pivoting and Backward
+			substitution (must show intermediate steps).
+		\item Repeat (a) using Gaussian Elimination with scaled partial pivoting and 
+			Backward substitution (must show intermediate steps).
+	\end{enumerate}
+
+\solution
+
+%% Problem 6
+\problem{} (20 points)
+
+	\begin{enumerate}
+		\item Solve the following linear system with forward and backward substitution,
+			$$
+			\begin{bmatrix}
+				1 & 0 & 0 \\
+				2 & 1 & 0 \\
+				-1 & 0 & 1 \\
+			\end{bmatrix}
+			\begin{bmatrix}
+				2 & 3 & -1 \\
+				0 & -2 & 1 \\
+				0 & 0 & 3 \\
+			\end{bmatrix}
+			\begin{bmatrix}
+				x_1 \\ x_2 \\ x_3 \\
+			\end{bmatrix} = 
+			\begin{bmatrix}
+				2 \\ -1 \\ 1
+			\end{bmatrix}
+			$$
+		\item Use the LU factorization (no permutation) with forward and backward
+			substitution to solve the following linear system (Use the sample MATLAB
+			codes posted on classpage as discussed in class),
+			\begin{alignat*}{2}
+				2x_1 &+ 3x_2 &- x_3 &= 2 \\
+				4x_1 &+ 4x_2 &- x_3 &= -1 \\
+				-2x_1 &- 3x_2 &+ 4x_3 &= 1
+			\end{alignat*}
+	\end{enumerate}
+
+\solution
+
+%% Problem 7
+\problem{} (20 points)
+
+	\begin{enumerate}
+		\item Use the $A = LDL^t$ factorization to solve the following linear system,
+			\begin{alignat*}{2}
+				2x_1 &- x_2 & &= 2 \\
+				-x_1 &+ 2x_2 &- x_3 &= -1 \\
+				&- x_2 &+ 2x_3 &= 1
+			\end{alignat*}
+		\item Repeat (a) with Cholesky factorization $A = LL^t$.
+	\end{enumerate}
+
+\solution
+
+\end{document}
