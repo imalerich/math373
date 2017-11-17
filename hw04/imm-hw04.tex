@@ -27,14 +27,44 @@
 
 \part
 	$$
-	\begin{tabular}{|c|c|c|}
+	\begin{tabular}{|c|c|c|c|c|}
 		\hline
-		$x$ & $f(x)$ & $f'(x)$ \\ \hline
-		0.5 & 0.4794 & \\ \hline
-		0.6 & 0.5646 & \\ \hline
-		0.7 & 0.6442 & \\ \hline
+		$x$ & $f(x)$ & $f'(x)$ & \cos x  & \varepsilon = \mid\cos x - f'(x)\mid \\ \hline
+		0.5 & 0.4794 & 0.85200 & 0.87758 & 0.025580 \\ \hline
+		0.6 & 0.5646 & 0.79600 & 0.82534 & 0.029340 \\ \hline
+		0.7 & 0.6442 & 0.79600 & 0.76484 & 0.031160 \\ \hline
 	\end{tabular}
 	$$
+
+	\bigbreak
+	We find the error term $\mid \frac{h}{2}f''(\xi)\mid$ from the following formula
+	$$
+		f'(x_0) = \frac{f(x_0+h) - f(x_0)}{h} - \frac{h}{2}f''(\xi)
+	$$
+	This error bound will be the same for forward and backward difference.
+	We have $f''(x) = -\sin x$  and $h = 0.1$ in all cases, thus our error is given by
+	$\mid \frac{0.1}{2}\sin \xi \mid$ where $\xi$ is a value within the bounds of our difference.
+	For each, we therefore want to maximize the value $\sin \xi$.
+	
+	\bigbreak
+	\textbf{$f'(0.5)$:} $max_{0.5,0.6}\ \sin \xi = 0.564642 \Rightarrow \upepsilon = 
+	\frac{0.1}{2}0.564642 = 0.028232$ \\
+	Thus we have an error bound of $0.02832$ which is just a bit over our actual error 
+	of $0.025580$.
+
+	\bigbreak
+	\textbf{$f'(0.6)$:} $max_{0.6,0.7}\ \sin \xi = 0.644218 \Rightarrow \upepsilon = 
+	\frac{0.1}{2}0.644218 = 0.03221$ \\
+	Thus we have an error bound of $0.03221$ a little bit worse than before. Our actual
+	error of $0.029340$ fits nicely within this bound.
+
+	\bigbreak
+	\textbf{$f'(0.7)$:} $max_{0.6,0.7}\ \sin \xi = 0.644218 \Rightarrow \upepsilon = 
+	\frac{0.1}{2}0.644218 = 0.03221$ \\
+	Since we are taking the backward difference, we come to the same error bound
+	as the forward difference for $f'(0.6)$, that is $0.03221$. Our actual error
+	for this value is the worst at $0.031160$ but still within the error bounds
+	like we would expect.
 
 \part
 

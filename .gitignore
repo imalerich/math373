@@ -1,0 +1,5 @@
+*.swp
+*.gz
+*.fdb_latexmk
+*.log
+_minted*
