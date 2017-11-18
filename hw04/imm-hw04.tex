@@ -234,6 +234,58 @@
 
 \solution
 
+	\part
+
+	\begin{proof} \\
+		If the quadrature formula has a degree of precision equal to 3, then
+		$x^k$ must be exact for each $k=0,1,2,3$. Further 3 must be the largest integer
+		for which this is true. Thus if it is in fact true for $k=0,1,2,3$ (as we will
+		show), it then must not be true for $k=4$ else the quadrature formula
+		would have a degree of precision equal to 4.
+
+		\bigbreak
+		\textbf{k=0:}
+		$\int_{-1}^{1} x^0 dx = \int_{-1}^{1} dx = 2$, further 
+		$(-\frac{\sqrt{3}}{3})^0 + \frac{\sqrt{3}}{3}) = 1 + 1 = 2$. Therefore we
+		have at least a quadrature with degree of precision 0.
+
+		\bigbreak
+		\textbf{k=1:}
+		$\int_{-1}^{1} x dx = 0$, further 
+		$(-\frac{\sqrt{3}}{3}) + \frac{\sqrt{3}}{3}) = 0 \Rightarrow$ our degree of
+		precision is at least 1.
+		
+		\bigbreak
+		\textbf{k=2:}
+		$\int_{-1}^{1} x^2 dx = \frac{2}{3}$, further 
+		$(-\frac{\sqrt{3}}{3})^2 + \frac{\sqrt{3}}{3})^2 = \frac{1}{3} + \frac{1}{3}= \frac{2}{3} 
+		\Rightarrow$ our degree of precision is at least 2.
+
+		\bigbreak
+		\textbf{k=3:}
+		$\int_{-1}^{1} x^3 dx = 0$, further 
+		$(-\frac{\sqrt{3}}{3})^3 + \frac{\sqrt{3}}{3})^3 =
+		-(\frac{\sqrt{3}}{3})^3 + \frac{\sqrt{3}}{3})^3 = 0
+		\Rightarrow$ our degree of precision is at least 3.
+		
+		\bigbreak
+		\textbf{k=4:}
+		$\int_{-1}^{1} x^2 dx = \frac{4}{10}$, further 
+		$(-\frac{\sqrt{3}}{3})^4 + \frac{\sqrt{3}}{3})^4 = 
+		2(\frac{\sqrt{3}}{3})^4 = 2\frac{9}{81} = 2\frac{1}{9} = \frac{2}{9}$. But as
+		$\frac{4}{10} \neq \frac{2}{9} \Rightarrow$ our degree of precision is less than 4.
+
+		\bigbreak
+		Note that by a generalization of the argument provided by $k=3$ we know that
+		the quadrature formula will be true for all odd $k$, but for a degree of precision
+		of $k$ we need it to be true for all integers less than $n$. Thus as the formula is 
+		not exact at $k=4$ and is exact for $k=0,1,2,3$ we know that we must have a degree
+		of precision equal to 3.
+
+	\end{proof}
+
+	\part
+
 %% Problem 4
 \problem{} (20 points)
 
