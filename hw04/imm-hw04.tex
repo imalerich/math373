@@ -174,7 +174,7 @@
 		x_i = [0.5, 0.625, 0.75, 0.875, 1.0], i \in [0,1,\ldots,4]$, these are the
 		same values obtained from Composite Trapezoidal Rule. The desired 
 		approximation is given by 
-		$\frac{h}{3}[f(a) + 2\Sigma_{j=1}^{(n/2)-1}f(x_{2j} + 4\Sigma_{j=1}^{n/2}f(x_{2j-1}) + f(b)]$. 
+		$\frac{h}{3}[f(a) + 2\Sigma_{j=1}^{(n/2)-1}f(x_{2j}) + 4\Sigma_{j=1}^{n/2}f(x_{2j-1}) + f(b)]$. 
 		Plugging in our values gives us
 		\begin{align*}
 			\int_{0.5}^{1} x^4 dx \approx
@@ -362,6 +362,67 @@
 
 \solution
 
+	\part
+
+		We have values $a=0, b=1, n=4$ from this we can derive $h = (b-a)/n = 0.25$.
+		With points $x_i = [0, 0.25, 0.5, 0.75, 1.0], i\in [0,1,\ldots,4]$.
+
+		Note that $x^{-1/4}\sin x$ has a singularity at it's left endpoint, even 
+		though the integral exists. We can get around this by first computing 
+		the fourth Taylor Polynomial $P_4$ for $g(x) = \sin x$.
+
+		\begin{align*}
+			P_4(x) &= g(0) + g'(0)(x) + \frac{g''(0)}{2}(x)^2 + \frac{g'''(0)}{6}(x)^3
+				+ \frac{g^{(4)}}{24}(x)^4 \\
+			&= 0 + x + 0 + \frac{-x^4}{24} = x + \frac{-x^4}{24}
+		\end{align*}
+
+		We now write
+		$$
+			\int_0^1 \frac{\sin x}{x^{1/4}} dx = 
+			\int_0^1 \frac{sin(x) - (x + \frac{-x^4}{24})}{x^{1/4}} dx + 
+			\int_0^1 \frac{x + \frac{-x^4}{24}}{x^{1/4}}
+		$$
+
+		Note that the second integral above is an integral over a polynomial,
+		we can compute this exactly as $0.56266$. Thus we now have
+		$$
+			\int_0^1 \frac{\sin x}{x^{1/4}} dx = 
+			\int_0^1 \frac{sin(x) - (x + \frac{-x^4}{24})}{x^{1/4}} dx + 
+			0.56266
+		$$
+		We now define $G(x)$ and use Composite Simpson's rule on $[0,1]$ to evaluate
+		the remaining integral.
+		$$
+			G(x) = \begin{cases}
+				0 & \text{ if x = 0 } \\
+				\frac{sin(x) - (x + \frac{-x^4}{24})}{x^{1/4}} & \text{ otherwise }
+			\end{casess}
+		$$
+
+		\bigbreak
+		The approximation by Composite Simpson's Rule on $G(x)$ is given by
+		$\frac{h}{3}[G(a) + 2\Sigma_{j=1}^{(n/2)-1}G(x_{2j}) + 4\Sigma_{j=1}^{n/2}G(x_{2j-1}) + G(b)]$. 
+		\\ Plugging in our values gives us
+		\begin{align*}
+			\int_0^1 x^{-1/4} \sin xdx &\approx
+				\frac{0.25}{3}[G(a) + 2(G(x_2)) + 4(G(x_1) + G(x_3)) + G(b)] \\
+			&= \frac{1}{12}[G(0) + 2(G(0.5)) + 4(G(0.25) + G(0.75)) + G(1)] \\
+			&= \frac{1}{12}[0 - 0.042741 - 0.25093 - 11686] \\
+			&= \frac{1}{12}[-0.41054] \\
+			&= -0.034211
+		\end{align*}
+
+		Putting it all together and we arrive at
+		$$
+			\int_0^1 \frac{\sin x}{x^{1/4}} dx \approx
+			-0.034211 + 0.56266 = 0.52845
+		$$
+		This is not too far off from the actual value of $0.56266$ with an actual
+		error of $0.034211$.
+
+	\part
+
 %% Problem 5
 \problem{} (30 points)
 
@@ -387,6 +448,7 @@
 	\begin{enumerate}
 		\item Solve the following linear system with forward and backward substitution,
 			$$
+			This is not too far off from the actual value of $$
 			\begin{bmatrix}
 				1 & 0 & 0 \\
 				2 & 1 & 0 \\
