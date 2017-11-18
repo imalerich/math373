@@ -118,6 +118,106 @@
 
 \solution
 
+	\part
+		By the trapezoidal rule, our approximation is given by $\frac{h}{2}[f(x_0) + f(x_1)]$.
+		Where $x_0 = 0.5, x_1 = 1$ gives us $f(x_0) = 0.0625, f(x_1) = 1.0$.
+		The estimate is given by $1.0625\frac{0.5}{2} = 0.26562$. The actual value
+		of the integral is $0.19375$, thus our actual error is
+		$\mid 0.26562 - 0.19375\mid = 0.071875$.
+
+		\bigbreak
+		The trapezoidal rule has an error term of $\frac{h^3}{12}f''(\xi)$. Where
+		$f''(\xi) = 12\xi^2$, maximizing this on the bounds $(0.5,1)$ gives us
+		$12$, thus our error bound $= \frac{0.5^3}{12}12 = 0.5^3 = 0.125$.
+		Note that our actual error $0.071875$ is within this error bound.
+
+	\part
+
+		First we compute the values needed by Simpson's rule. We have $a=0.5, b=1.0$ 
+		thus $h = (1.0-0.5)/2 = 0.25, x_0 = a = 0.5, x_1 = a + h = 0.75, x_2 = 1.0$.
+		Simpson's rule is given by $\frac{h}{3}[f(x_0) + 4f(x_1) + f(x_2)]$, filling
+		in our values gives us $\frac{0.25}{3}[0.5^4 + 4\times 0.75^4 + 1^4] = 
+		0.08333[0.0625 + 1.2656 + 1] = 0.08333[2.3281] = 0.194$.
+		Given the actual value of the integral as $0.19375$ our actual error is 
+		then $\mid0.194 - 0.19375\mid = 0.00025057$.
+
+		\bigbreak
+		Simpson's rule has an error term of $\frac{h^5}{90}f^{(4)}(\xi)$. Where
+		$f^{(4)}(\xi) = 24$. Our error bound is then $24\frac{0.25^5}{90} = 0.00026042$.
+		Our actual error sneaks just under this error bound.
+
+	\part
+		
+		For Composite Trapezoidal Rule with $n=4$, we have $h = (1.0-0.5)/4 = 0.125,
+		x_i = [0.5, 0.625, 0.75, 0.875, 1.0], i \in [0,1,\ldots,4]$. The Composite
+		Trapezoidal Approximation is given by $\frac{h}{2}[f(a) + 2\Sigma_{j=1}^{n-1}
+		f(x_j) + f(b)]$. Plugging in our values gives us
+		\begin{align*}
+			\int_{0.5}^{1} x^4 dx \approx
+			&\frac{0.125}{2}[f(0.5) + 2(f(0.625) + f(0.75) + f(0.875)) + f(1.0)] \\
+			= & \frac{0.125}{2}[0.0625 + 2(1.0557) + 1] \\
+			= & \frac{0.125}{2}[3.1739] \\
+			= & 0.19837
+		\end{align*}
+		With an actual value of $0.19375$ our actual error is
+		$0.19837 - 0.19375 = 0.0046188$.
+
+		\bigbreak
+		The error term is given by $\frac{b-a}{12}h^2 f''(\mu)$. From part (a) we know
+		we can maximize $f''(\mu)$ as $12$. Thus the error bound is 
+		$12 \frac{1-0.5}{12}0.125^2 = 0.0078125$.
+		Again, our actual is nicely within this bound.
+
+	\part
+
+		For Composite Simpson's Rule with $n=4$, we have $h=(1.0-0.5)/4=0.125,
+		x_i = [0.5, 0.625, 0.75, 0.875, 1.0], i \in [0,1,\ldots,4]$, these are the
+		same values obtained from Composite Trapezoidal Rule. The desired 
+		approximation is given by 
+		$\frac{h}{3}[f(a) + 2\Sigma_{j=1}^{(n/2)-1}f(x_{2j} + 4\Sigma_{j=1}^{n/2}f(x_{2j-1}) + f(b)]$. 
+		Plugging in our values gives us
+		\begin{align*}
+			\int_{0.5}^{1} x^4 dx \approx
+				& \frac{0.125}{3}[f(0.5) + 2(f(0.75)) +
+				4(f(0.625) + f(0.875)) + f(1.0)] \\ 
+			= & \frac{0.125}{3}[0.625 + 2(0.31641) + 
+				4(0.73877) + 1.0] \\
+			= & \frac{0.125}{3}[4.6504] \\
+			= & 0.193766276 \\
+		\end{align*}
+		With an actual value of $0.19375$ our actual error is
+		$0.193766276 - 0.19375 = 0.0000162760416666519$.
+
+		\bigbreak
+		The error term is given by $\frac{b-a}{180}h^4f^{(4)}(\mu)$. From part (b) we
+		know we $f^{(4)}(\mu) = 24$. Putting it all together yields 
+		$24\frac{1.0-0.5}{180}0.125^4 = 0.0000162760416666667$. Here we have a pretty
+		accurate error bound and our actual value is falling just under it, though at this
+		number of significant digits we might expect computer precision to be affecting our results.
+
+		\part
+
+		For CompositeTrapezoidalRule see my answer to part (f).
+		\textcolor[RGB]{240,240,240}{\rule{\textwidth}{0.5pt}}\bigbreak
+
+		\inputminted{octave}{CompositeSimpsonsRule.m}
+		Running 
+		\begin{minted}{octave}
+		CompositeSimpsonsRule(@(x)x.^4, 0.5, 1, 4)
+		\end{minted}
+		produces a result of $0.19377$ which is the same I found in part (d).
+
+		\part
+
+		\inputminted{octave}{CompositeTrapezoidalRule.m}
+		Running 
+		\begin{minted}{octave}
+		CompositeTrapezoidalRule(@(x)x.^4, 0.5, 1, 4)
+		\end{minted}
+		produces a result
+		of $0.19830$ which is roughly the same I found in part (c). There is some variation
+		at later significant digits, but I would attribute to truncation when computing by hand.
+
 %% Problem 3
 \problem{} (20 points)
 
