@@ -68,6 +68,33 @@
 
 \part
 
+	Let $f(x) = \sin(x)$, and $x = 3$. \\
+	We have $f'(x) = \cos(x)$, thus $f'(3) = \cos(3) = -0.9899924966$. \\
+
+	$$
+	\begin{tabular}{|c|c|c|c|}
+		\hline
+		n & $f'_n(x)$ & $\mid f'_n(x) - f'(x) \mid$ \\ \hline
+		1 & -0.995393456265767 & 0.005400959665322 \\ \hline
+		2 & -0.990681590968298 & 0.000689094367853 \\ \hline
+		3 & -0.990062891599724 & 0.000070394999279 \\ \hline
+		4 & -0.989999550952969 & 0.000007054352524 \\ \hline
+		5 & -0.989993202188399 & 0.000000705587954 \\ \hline
+		6 & -0.989992567285158 & 0.000000070684713 \\ \hline
+		7 & -0.989992501865267 & 0.000000005264821 \\ \hline
+		8 & -0.989992490763036 & 0.000000005837409 \\ \hline
+		9 & -0.989992560151975 & 0.000000063551530 \\ \hline
+		10 & -0.989992532396400 & 0.000000035795954 \\ \hline
+	\end{tabular}
+	$$
+
+	In general, for larger values of $n$ we would expect the error between
+	our approximation and the actual derivative to go down. However, if we 
+	in the above example we can see the error actually increase from $n=7$ to
+	$n=8$ and from $n=8$ to $n=9$. We do see a decrease again from $n=9$ to $n=10$
+	however we still don't have the precision found at $n=7$ right before our estimates
+	started to get worse.
+
 %% Problem 2
 \problem{} (60 points)
 

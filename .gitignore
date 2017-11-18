@@ -2,4 +2,8 @@
 *.gz
 *.fdb_latexmk
 *.log
+*.aux
+*.fls
+*.out
+*.res
 _minted*
