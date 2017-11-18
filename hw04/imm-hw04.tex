@@ -276,15 +276,75 @@
 		$\frac{4}{10} \neq \frac{2}{9} \Rightarrow$ our degree of precision is less than 4.
 
 		\bigbreak
-		Note that by a generalization of the argument provided by $k=3$ we know that
+		Note that by a generalization of the argument provided for $k=3$ we know that
 		the quadrature formula will be true for all odd $k$, but for a degree of precision
-		of $k$ we need it to be true for all integers less than $n$. Thus as the formula is 
+		of $k$ we need it to be true for all integers less than or equal to $k$. Thus as the formula is 
 		not exact at $k=4$ and is exact for $k=0,1,2,3$ we know that we must have a degree
 		of precision equal to 3.
 
 	\end{proof}
 
+	\clearpage
 	\part
+
+		Before we begin, we must first transform the given integral on the bounds 
+		$1,1.5$ to the bounds $-1,1$ through the following transformation
+		\begin{align*}
+			\int_1^{1.5} f(x)dx 
+			&= \int_{-1}^1 f\Big(\frac{(1.5-1)t + 1 + 1.5}{2}\Big)\frac{(1.5-1)}{2}dt \\
+			&= \int_{-1}^1 f\Big(\frac{0.5t + 2.5}{2}\Big)0.25dt \\
+			&= \int_{-1}^1 0.25 f(0.25t + 1.25)dt
+		\end{align*}
+		Thus define $g(x) = 0.25 f(0.25x + 1.25)$.
+		Therefore the approximation via Gaussian
+		quadrature is given by $\Sigma_{i=1}^{n}c_i g(x_i)$.
+		Note that the actual value of the integral we are approximating is $0.192259$.
+
+		\bigbreak
+		\textbf{n=2:} \\
+		From the table in the lecture notes $c = [1.0, 1.0]$.
+		The points we would like to consider are $x_i = [-1, 1]$, plugging these
+		into the formula above gives us
+		\begin{align*}
+			\int_{1}^{1.5}x^2\ln x dx &\approx
+				c_1 g(x_1) + c_2 g(x_2) \\
+			&= g(-1) + g(1) \\
+			&= 0.22807 \\
+		\end{align*}
+		This is an error of $0.035811$.
+
+		\bigbreak
+		\textbf{n=3:} \\
+		From the table in the lecture notes $c = [\frac{5}{9}, \frac{8}{9}, \frac{5}{9}]$.
+		The points we would like to consider are $x_i = [-1, 0, 1]$, plugging these
+		into the formula above gives us
+		\begin{align*}
+			\int_{1}^{1.5}x^2\ln x dx &\approx
+				c_1 g(x_1) + c_2 g(x_2) + c_3 g(x_3) \\
+			&= \frac{5}{9}g(-1) + \frac{8}{9}g(0) + \frac{5}{9}g(1)\\
+			&= 0.0 + 0.07748 + 1.2671 \\
+			&= 0.20419 \\
+		\end{align*}
+		This is an error of $0.011931$.
+
+		\clearpage
+		\textbf{n=5:} \\
+		From the table in the lecture notes 
+		$c = [0.2369268850, 0.4786286705, 0.5688888889, 0.4786286705, 0.2369268850]$.
+		The points we would like to consider are $x_i = [-1, -0.5, 0, 0.5, 1]$, plugging these
+		into the formula above gives us
+		\begin{align*}
+			\int_{1}^{1.5}x^2\ln x dx &\approx
+				c_1 g(x_1) + c_2 g(x_2) + c_3 g(x_3) + c_4 g(x_4) + c_5 g(x_5) \\
+			&= 0.2369268850g(-1.0) + 0.4786286705g(-0.5) + \\
+			&\ \ 0.5688888889g(0.0) + 0.4786286705g(0.5) + 0.2369268850g(1.0) \\
+			&= 0.000000 + 0.017837 + 0.049587 + 0.072043 + 0.054037 \\
+			&= 0.19350
+		\end{align*}
+		This is an error of $0.0012410$.
+		\bigbreak
+		We can see that as we increase $n$ we get a more accurate approximation of the
+		actual integral.
 
 %% Problem 4
 \problem{} (20 points)
