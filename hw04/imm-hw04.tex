@@ -423,6 +423,15 @@
 
 	\part
 
+		We can convert this right endpoint of infinity into a limit with a left
+		endpoint singularity at 0 via the following substitution
+		$$
+			\int_a^\infty f(x) dx = \int_0^{1/a}t^{-2}f(\frac{1}{t})dt
+		$$
+		In this particular instance we have $f(x) = \frac{\cos x}{x^3}$ giving
+		us the following integral to solve $\int_0^1 t^{-2}\frac{\cos(1/t)}{(1/t)^3} dt =
+		\int_0^1 t\cos (1/t)$.
+
 %% Problem 5
 \problem{} (30 points)
 
@@ -448,7 +457,6 @@
 	\begin{enumerate}
 		\item Solve the following linear system with forward and backward substitution,
 			$$
-			This is not too far off from the actual value of $$
 			\begin{bmatrix}
 				1 & 0 & 0 \\
 				2 & 1 & 0 \\
