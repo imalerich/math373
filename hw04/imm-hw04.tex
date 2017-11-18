@@ -430,7 +430,41 @@
 		$$
 		In this particular instance we have $f(x) = \frac{\cos x}{x^3}$ giving
 		us the following integral to solve $\int_0^1 t^{-2}\frac{\cos(1/t)}{(1/t)^3} dt =
-		\int_0^1 t\cos (1/t)$.
+		\int_0^1 t\cos (1/t)$. This function has a singularity at $t=0$ and unlike part (a)
+		I am not dividing by $t$ to some fractional power, my singularity is within the cosine.
+		However note that $\lim_{t\rightarrow 0} t\cos(1/t) = 0$. Thus I can still employ
+		a similar technique by defining a piece wise function $G(x)$.
+		$$
+			G(x) = \begin{cases}
+				0 & \text{ if x = 0 } \\ 
+				t\cos (1/t) & \text{ otherwise} \\
+			\end{cases}
+		$$
+
+		\bigbreak
+		The approximation by Composite Simpson's Rule on $G(x)$ is given by
+		$\frac{h}{3}[G(a) + 2\Sigma_{j=1}^{(n/2)-1}G(x_{2j}) + 4\Sigma_{j=1}^{n/2}G(x_{2j-1}) + G(b)]$. 
+		\\ After our conversion we have $a=0, b=1, h=(1-0)/6 = 1/6$.
+		As we are now integrating over the interval $(0,1)$ our points will be given by 
+		$x_i = [0, 1/6, 2/6, 3/6, 4/6, 5/6, 1], i \in [0,1,\ldots,6]$. 
+		\clearpage
+		Plugging in our values gives us
+		\begin{align*}
+			\int_0^1 t\cos (1/t) &\approx
+				\frac{1}{6(3)}[G(a) + 2(G(x_2) + G(x_4)) 
+				+ 4(G(x_1) + G(x_3) + G(x_5)) + G(b)] \\
+			&= \frac{1}{18}[G(0) + 2(G(1/3) + G(2/3)) 
+				+ 4(G(1/6) + G(1/2) + G(5/6)) + G(1)] \\
+			&= \frac{1}{18}[0 - 0.56568
+				+ 1.0157 + 0.54030] \\
+			&= \frac{1}{18}[0.99030] \\
+			&= 0.055017 \\
+			&\approx \int_1^{\infty} \frac{\cos(x)}{x^3}dx
+		\end{align*}
+		Comparing this to the actual value of $\approx 0.0181176$. We can see that we
+		are within the neighborhood, with an actual error of $0.036899 \approx 20.366\%$.
+		Much of this error likely comes from the use of $t\cos(1/t)$ to estimate the integral,
+		which fluctuates rapidly near 0, making Simpsons rule difficult to evaluate accurately.
 
 %% Problem 5
 \problem{} (30 points)
