@@ -1,0 +1,3 @@
+for n=40
+minimum eigenvalue: 3.993835
+maximum eigenvalue: 0.006165
