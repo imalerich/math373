@@ -138,7 +138,7 @@
 	Choose $f(x) = 4\sin(2x), \alpha = 0, \beta = \sin(2), n=20,40$.
 	\begin{enumerate}
 		\item Find the maximum and minimum eigenvalues (in magnitude) of A.
-		\item solve the linear system by Gaussian Elimination with Backward substitution.
+		\item Solve the linear system by Gaussian Elimination with Backward substitution.
 	\end{enumerate}
 
 \clearpage
@@ -147,7 +147,8 @@
 	\inputminted{octave}{p2.m}
 	Running the above code using the provided $f,\alpha,\beta$ values and plotting
 	the output produces the following two graphs. The left (blue) is for $n=20$ where
-	the right (red) is for $n=40$.
+	the right (red) is for $n=40$. This code uses $A^{-1}b$ to solve for $u$, see below
+	in part (b) for code which uses the GaussE script to produce an equivalent result.
 	\begin{centering}
 		\includegraphics[scale=0.85]{p2.png}
 	\end{centering}
@@ -162,5 +163,15 @@
 	\inputminted{text}{p2a40.txt}
 
 	\part
+	\inputminted{octave}{p2b.m}
+	This code is nearly identical to the solution provided above, however this code
+	uses Gaussian Elimination to solve the resulting linear system. We can see
+	from the graphs below that the results of using Gaussian Elimination 
+	are identical to using the inverse of A to solve the linear system.
+	The left graph below (blue) is for $n=20$ and the right (green) is for $n=40$ as
+	input to the script above. All other inputs are as specified in the problem statement.
+	\begin{centering}
+		\includegraphics[scale=0.85]{p2b.png}
+	\end{centering}
 
 \end{document}

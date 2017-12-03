@@ -1,4 +1,4 @@
-function [x u] = p2(f, alpha, beta, n)
+function [x u] = p2b(f, alpha, beta, n)
 
 % want to approximate u(x)
 h = 1/n;
@@ -25,8 +25,8 @@ b(1) += u0 / (h^2);
 b(length(b)) += un / (h^2);
 b *= (h^2);
 
-% Au = b => u = A^{-1}b
-u = inv(A) * b';
+% Use Gaussian Elimination to solve the system.
+[u U] = GaussE(A, b');
 % add the boundaries to the result
 u = [u0 u' un];
 

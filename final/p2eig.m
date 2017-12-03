@@ -16,7 +16,7 @@ mags = abs(e);
 [_min minidx] = min(mags);
 
 printf('for n=%d\n', n);
-printf('minimum eigenvalue: %f\n', e(maxidx(1)))
-printf('maximum eigenvalue: %f\n', e(minidx(1)))
+printf('minimum eigenvalue: %f\n', e(minidx(1)))
+printf('maximum eigenvalue: %f\n', e(maxidx(1)))
 
 end
