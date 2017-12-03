@@ -430,7 +430,41 @@
 		$$
 		In this particular instance we have $f(x) = \frac{\cos x}{x^3}$ giving
 		us the following integral to solve $\int_0^1 t^{-2}\frac{\cos(1/t)}{(1/t)^3} dt =
-		\int_0^1 t\cos (1/t)$.
+		\int_0^1 t\cos (1/t)$. This function has a singularity at $t=0$ and unlike part (a)
+		I am not dividing by $t$ to some fractional power, my singularity is within the cosine.
+		However note that $\lim_{t\rightarrow 0} t\cos(1/t) = 0$. Thus I can still employ
+		a similar technique by defining a piece wise function $G(x)$.
+		$$
+			G(x) = \begin{cases}
+				0 & \text{ if x = 0 } \\ 
+				t\cos (1/t) & \text{ otherwise} \\
+			\end{cases}
+		$$
+
+		\bigbreak
+		The approximation by Composite Simpson's Rule on $G(x)$ is given by
+		$\frac{h}{3}[G(a) + 2\Sigma_{j=1}^{(n/2)-1}G(x_{2j}) + 4\Sigma_{j=1}^{n/2}G(x_{2j-1}) + G(b)]$. 
+		\\ After our conversion we have $a=0, b=1, h=(1-0)/6 = 1/6$.
+		As we are now integrating over the interval $(0,1)$ our points will be given by 
+		$x_i = [0, 1/6, 2/6, 3/6, 4/6, 5/6, 1], i \in [0,1,\ldots,6]$. 
+		\clearpage
+		Plugging in our values gives us
+		\begin{align*}
+			\int_0^1 t\cos (1/t) &\approx
+				\frac{1}{6(3)}[G(a) + 2(G(x_2) + G(x_4)) 
+				+ 4(G(x_1) + G(x_3) + G(x_5)) + G(b)] \\
+			&= \frac{1}{18}[G(0) + 2(G(1/3) + G(2/3)) 
+				+ 4(G(1/6) + G(1/2) + G(5/6)) + G(1)] \\
+			&= \frac{1}{18}[0 - 0.56568
+				+ 1.0157 + 0.54030] \\
+			&= \frac{1}{18}[0.99030] \\
+			&= 0.055017 \\
+			&\approx \int_1^{\infty} \frac{\cos(x)}{x^3}dx
+		\end{align*}
+		Comparing this to the actual value of $\approx 0.0181176$. We can see that we
+		are within the neighborhood, with an actual error of $0.036899 \approx 20.366\%$.
+		Much of this error likely comes from the use of $t\cos(1/t)$ to estimate the integral,
+		which fluctuates rapidly near 0, making Simpsons rule difficult to evaluate accurately.
 
 %% Problem 5
 \problem{} (30 points)
@@ -450,6 +484,124 @@
 	\end{enumerate}
 
 \solution
+
+	\part
+
+	\begin{bmatrix}
+		2 & -1.5 & 3  & 1 \\
+		-1 & 0 & 2 & 3 \\
+		4 & -4.5 & 5 & 1
+	\end{bmatrix} \Rightarrow
+	\begin{bmatrix}
+		2 & -1.5 & 3  & 1 \\
+		-1 & 0 & 2 & 3 \\
+		0 & -4.5 & 13 & 13
+	\end{bmatrix} \Rightarrow
+	\begin{bmatrix}
+		0 & -1.5 & 7 & 7 \\
+		-1 & 0 & 2 & 3 \\
+		0 & -4.5 & 13 & 13
+	\end{bmatrix} \Rightarrow \\ \bigbreak
+	\begin{bmatrix}
+		-1 & 0 & 2 & 3 \\
+		0 & -1.5 & 7 & 7 \\
+		0 & 0 & -8 & -8
+	\end{bmatrix} \Rightarrow
+	\begin{bmatrix}
+		1 & 0 & -2 & -3 \\
+		0 & 1 & -\frac{28}{6} & -\frac{28}{6} \\
+		0 & 0 & 1 & 1 
+	\end{bmatrix} 
+
+	\bigbreak
+	From the bottom row we have $x_3 = 1$. The second row has $x_2 - \frac{28}{6}x_3 = -\frac{28}{6}$.
+	Substituting in $x_3$ yields $x_2 - \frac{28}{6} = -\frac{28}{6} \Rightarrow x_2 = 0$. 
+	Finally we have $x_1 - 2x_3 = -3 \Rightarrow x_1 - 2 = -3 \Rightarrow x_1 = -1$. Expressing
+	this as a vector, our solution is $x = [-1, 0, 1]$. These values can be plugged back
+	into the original equations to verify the solution.
+
+	\clearpage
+	\part
+	In the below example, I scale each row such that it's leading element is 1 once all of
+	my row operations are completed. This is only to make funding the solution easier when
+	performing operations by hand.
+	I could stop at the second to last operation and use that to compute the result.
+	The largest value in column 1 is $4$ (row 3) thus our first step swaps rows 1 and 3.
+	Next we perform Gaussian elimination. After this the largest value in column 2
+	is in row 2 (when considering absolute value), thus no swaps are necessary and we can
+	perform Gaussian elimination.
+	\bigbreak
+	\begin{bmatrix}
+		2 & -1.5 & 3  & 1 \\
+		-1 & 0 & 2 & 3 \\
+		4 & -4.5 & 5 & 1
+	\end{bmatrix} \Rightarrow
+	\begin{bmatrix}
+		4 & -4.5 & 5 & 1 \\
+		-1 & 0 & 2 & 3 \\
+		2 & -1.5 & 3  & 1 \\
+	\end{bmatrix} \Rightarrow
+	\begin{bmatrix}
+		4 & -4.5 & 5 & 1 \\
+		0 & -1.125 & 3.25 & 3.25 \\
+		0 & 0.75 & 0.5 & 0.5 \\
+	\end{bmatrix} \Rightarrow \\ \bigbreak
+	\begin{bmatrix}
+		4 & -4.5 & 5 & 1 \\
+		0 & -1.125 & 3.25 & 3.25 \\
+		0 & 0 & 8/3 & 8/3 \\
+	\end{bmatrix} \Rightarrow
+	\begin{bmatrix}
+		1 & -1.125 & 1.25 & 0.25 \\
+		0 & 1 & -26/9 & -26/9 \\
+		0 & 0 & 1 & 1 \\
+	\end{bmatrix}
+
+	\bigbreak
+	From the bottom row we have $x_3 = 1$, working back to the middle row we have
+	$x_2 + -(26/9)x_3 = -26/9 \Rightarrow x_2 - 26/9 = -26/9 \Rightarrow x_2 = 0$.
+	And lastly $x_1 - 1.125x_2 + 1.25x_3 = 0.25 \Rightarrow x_1 + 0 + 1.25 = 0.25 
+	\Rightarrow x_1 = -1$. This is the same solution we found in part (a),
+	expressed as a vector it is again $x = [-1, 0, 1]$.
+
+	\part
+	For scaled pivoting, we choose rows which have the maximum value ($s_i$) when making
+	our swaps. As in part (b) I scale each row down such that the leading element is $1$
+	to make finding the final solution easier by hand. In this example we have values
+	$s_1 = 3, s_2 = 3, s_3 = 5$, thus our initial swap will be moving row 3 to row 1.
+	We perform the Gaussian elimination. $s_2$ is the next largest value, as it is in row
+	2 already we need no further swaps and can go ahead and perform Gaussian elimination.
+	\bigbreak
+	\begin{bmatrix}
+		2 & -1.5 & 3  & 1 \\
+		-1 & 0 & 2 & 3 \\
+		4 & -4.5 & 5 & 1
+	\end{bmatrix} \Rightarrow
+	\begin{bmatrix}
+		4 & -4.5 & 5 & 1 \\
+		-1 & 0 & 2 & 3 \\
+		2 & -1.5 & 3  & 1 
+	\end{bmatrix} \Rightarrow
+	\begin{bmatrix}
+		4 & -4.5 & 5 & 1 \\
+		0 & -1.125 & 3.25 & 3.25 \\
+		0 & 0.75 & 0.5 & 0.5 \\
+	\end{bmatrix} \Rightarrow \\ \bigbreak
+	\begin{bmatrix}
+		4 & -4.5 & 5 & 1 \\
+		0 & -1.125 & 3.25 & 3.25 \\
+		0 & 0 & 8/3 & 8/3 \\
+	\end{bmatrix} \Rightarrow
+	\begin{bmatrix}
+		1 & -1.125 & 1.25 & 0.25 \\
+		0 & 1 & -26/9 & -26/9 \\
+		0 & 0 & 1 & 1 \\
+	\end{bmatrix}
+
+	\bigbreak
+	Despite the different method of selection which rows to swap, in this scenario I actually
+	ended up reducing the matrix in the same manner as part (b). Thus we arrive again at the
+	same solution with $x = [-1, 0, 1]$ that we had for part (b).
 
 %% Problem 6
 \problem{} (20 points)
@@ -476,7 +628,7 @@
 			$$
 		\item Use the LU factorization (no permutation) with forward and backward
 			substitution to solve the following linear system (Use the sample MATLAB
-			codes posted on classpage as discussed in class),
+			codes posted on classpage as discussed in class).
 			\begin{alignat*}{2}
 				2x_1 &+ 3x_2 &- x_3 &= 2 \\
 				4x_1 &+ 4x_2 &- x_3 &= -1 \\
@@ -485,6 +637,131 @@
 	\end{enumerate}
 
 \solution
+
+	\part
+
+	let L = 
+	\begin{bmatrix}
+		1 & 0 & 0 \\
+		2 & 1 & 0 \\
+		-1 & 0 & 1 \\
+	\end{bmatrix},
+	and U = 
+	\begin{bmatrix}
+		2 & 3 & -1 \\
+		0 & -2 & 1 \\
+		0 & 0 & 3 \\
+	\end{bmatrix}, 
+	define y = Ux. \\
+	We are then trying to solve 
+	$\begin{bmatrix}
+		1 & 0 & 0 \\
+		2 & 1 & 0 \\
+		-1 & 0 & 1 \\
+	\end{bmatrix}y = 
+	\begin{bmatrix}
+		2 \\ -1 \\ 1
+	\end{bmatrix}$.
+
+	\bigbreak
+	We can solve this with forward substitution. Note that $y_1 = 2$, then
+	$2y_1 + y_2 = -1 \Rightarrow 4 + y_2 = -1 \Rightarrow y_2 = -5$. Lastly
+	$-y_1 + y_3 = 1 \Rightarrow -2 + y_3 = 1 \Rightarrow y_3 = 3$.
+	Next we solve $Ux = y$ for $x$ to obtain the solution to the original system.
+	\bigbreak
+	$\begin{bmatrix}
+		2 & 3 & -1 \\
+		0 & -2 & 1 \\
+		0 & 0 & 3 \\
+	\end{bmatrix}x =
+	\begin{bmatrix}
+		2 \\ -5 \\ 3
+	\end{bmatrix}$
+
+	\bigbreak
+	We can solve this with backward substitution. We have $3x_3 = 3 \Rightarrow x_3 = 1$.
+	$-2x_2 + x_3 = -5 \Rightarrow -2x_2 + 1 = -5 \Rightarrow -2x_2 = -6 \Rightarrow x_2 = 3$.
+	Lastly $2x_1 + 3x_2 - x_3 = 2 \Rightarrow 2x_1 + 9 - 1 = 2 \Rightarrow x_1 = -3$.
+	Thus we arrive at our solution\ldots
+	$$
+	\begin{bmatrix}
+		x_1 \\ x_2 \\ x_3
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		-3 \\ 3 \\ 1
+	\end{bmatrix}
+	$$
+
+	\part
+
+	We can create a matrix M = 
+	\begin{bmatrix}
+		2 & 3 & -1 \\
+		4 & 4 & -1 \\
+		-2 & -3 & 4 \\
+	\end{bmatrix}
+	which represents the LHS of the equation we wish to solve.
+	Running this matrix through the provided MATLAB routine lu_nopivoting gives
+	us matrices $L,U$ we can then set up this problem in terms of $L$ and $U$.
+
+	$$
+	\begin{bmatrix}
+		1 & 0 & 0 \\
+		2 & 1 & 0 \\
+		-1 & 0 & 1 \\
+	\end{bmatrix}
+	\begin{bmatrix}
+		2 & 3 & -1 \\
+		0 & -2 & 1 \\
+		0 & 0 & 3 \\
+	\end{bmatrix}
+	\begin{bmatrix}
+		x_1 \\ x_2 \\ x_3
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		2 \\ -1 \\ 1 \\
+	\end{bmatrix}
+	$$
+	\bigbreak
+	As before let $y=Ux$ we then have the equation
+	$$
+	\begin{bmatrix}
+		1 & 0 & 0 \\
+		2 & 1 & 0 \\
+		-1 & 0 & 1 \\
+	\end{bmatrix}y = 
+	\begin{bmatrix}
+		2 \\ -1 \\ 1 \\
+	\end{bmatrix}
+	$$
+	which we can solve using forward substitution. $y_1 = 2$, $2y_1 + y_2 = -1 \Rightarrow
+	4 + y_2 = -1 \Rightarrow y_2 = -5$, $-1y_1 + y_3 = 1 \Rightarrow -2 + y_3 = 1 \Rightarrow
+	y_3 = 3$. This yields the solution $y = [2, -5, 3]$. Now we set up the equation $Ux = y$.
+	$$
+	\begin{bmatrix}
+		2 & 3 & -1 \\
+		0 & -2 & 1 \\
+		0 & 0 & 3 \\
+	\end{bmatrix}x = 
+	\begin{bmatrix}
+		2 \\ -5 \\ 3
+	\end{bmatrix}
+	$$
+	This can be solved using backward substitution. $3x_3 = 3 \Rightarrow x_3 = 1$,
+	$-2x_2 + x_3 = -5 \Rightarrow -2x_2 + 1 = -5 \Rightarrow -2x_2 = -6 \Rightarrow x_2 = 3$.
+	$2x_1 + 3x_2 -1x_3 = 2 \Rightarrow 2x_1 + 9 - 1 = 2 \Rightarrow 2x_1 + 8 = 2 \Rightarrow
+	2x_1 = -6 \Rightarrow x_1 = -3$.
+	Thus we arrive at our solution\ldots
+	$$
+	\begin{bmatrix}
+		x_1 \\ x_2 \\ x_3
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		-3 \\ 3 \\ 1
+	\end{bmatrix}
+	$$
+
+	%% The solution should be... [-3 3 1]
 
 %% Problem 7
 \problem{} (20 points)
@@ -500,5 +777,134 @@
 	\end{enumerate}
 
 \solution
+
+	\part
+	We can create a matrix M = 
+	\begin{bmatrix}
+		2 & -1 & 0 \\
+		-1 & 2 & -1 \\
+		0 & -1 & 2 \\
+	\end{bmatrix}
+	which represents the LHS of the equation we wish to solve. We can factor this matrix $M$ into
+	$LDL^t$ format using the built in MATLAB function which produces the matrices 
+	$L = \begin{bmatrix}
+		1 & 0 & 0 \\
+		-0.5 & 1 & 0 \\
+		0 & -2/3 & 1 \\
+	\end{bmatrix}$ and 
+	$D = \begin{bmatrix}
+		2 & 0 & 0 \\
+		0 & 1.5 & 0 \\
+		0 & 0 & 4/3 \\
+	\end{bmatrix}$. We can then rewrite the problem as\ldots
+	$$
+	\begin{bmatrix}
+		1 & 0 & 0 \\
+		-0.5 & 1 & 0 \\
+		0 & -2/3 & 1 \\
+	\end{bmatrix}
+	\begin{bmatrix}
+		2 & 0 & 0 \\
+		0 & 1.5 & 0 \\
+		0 & 0 & 4/3 \\
+	\end{bmatrix}
+	\begin{bmatrix}
+		1 & -0.5 & 0 \\
+		0 & 1 & -2/3 \\
+		0 & 0 & 1
+	\end{bmatrix}x = 
+	\begin{bmatrix}
+		2 \\ -1 \\ 1
+	\end{bmatrix}
+	$$
+	We can solve this system by employing a similar technique as we used in Problem 6. \\
+	Let $y = DL^tx$. We will solve $Ly=[2, -1, 1]^t$ for y, that is\ldots
+	$$
+	\begin{bmatrix}
+		1 & 0 & 0 \\
+		-0.5 & 1 & 0 \\
+		0 & -2/3 & 1 \\
+	\end{bmatrix}y = 
+	\begin{bmatrix}
+		2 \\ -1 \\ 1
+	\end{bmatrix}
+	$$
+	Using forward substitution, we have $y_1 = 2$, $-0.5y_1 + y_2 = -1 \Rightarrow -1 + y_2 = -1 
+	\Rightarrow y_2 = 0$, $-2/3y_2 + y_3 = 1 \Rightarrow y_3 = 1$. Next we will take $D^{-1}y$, note
+	that D is diagonal, thus $D^{-1}y = [2^{-1}2, 1.5^{-1}0, (4/3)^{-1}1] \Rightarrow
+	D^{-1}y = [1, 0, 3/4]$. Lastly, we solve $L^tx = D^{-1}y$ for $x$.
+	$$
+	\begin{bmatrix}
+		1 & -0.5 & 0 \\
+		0 & 1 & -2/3 \\
+		0 & 0 & 1
+	\end{bmatrix}x = 
+	\begin{bmatrix}
+		1 \\ 0 \\ 3/4
+	\end{bmatrix}
+	$$
+	Using backward substitution we find that $x_3 = 0.75$, $x_2 - (2/3)(3/4) = 0 \Rightarrow
+	x_2 = 0.5$, $x_1 - 0.5x_2 = 1 \Rightarrow x_1 - 0.25 = 1 \Rightarrow x_1 = 1.25$. Therefore\ldots
+	$$
+	\begin{bmatrix}
+		x_1 \\ x_2 \\ x_3
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		1.25 \\ 0.5 \\ 0.75
+	\end{bmatrix}
+	$$
+
+	\part
+
+	Using the same matrix $M$ as in part (a) we can run the Cholesky MATLAB routine to find $L$ such that
+	$LL^t = M$. Running this routine produces the result 
+	$$
+	L = \begin{bmatrix}
+		1.4142 & 0 & 0 \\
+		-0.7071 & 12247 & 0 \\
+		0 & -0.8165 & 1.1547 \\
+	\end{bmatrix}.
+	$$
+	Let $L^tx = y$, our system is then equal to\ldots
+	$$
+	\begin{bmatrix}
+		1.4142 & 0 & 0 \\
+		-0.7071 & 1.2247 & 0 \\
+		0 & -0.8165 & 1.1547 \\
+	\end{bmatrix}y = 
+	\begin{bmatrix}
+		2 \\ -1 \\ 1 \\
+	\end{bmatrix}
+	$$
+	We can solve for $y$ using forward substitution, $1.4142y_1 = 2 \Rightarrow 1.4142$.
+	$-0.7071y_1 + 1.2247y_2 = -1 \Rightarrow -1.0 + 1.2247y_2 = -1 \Rightarrow 1.2247y_2 = 0 \Rightarrow
+	y_2 = 0$, $-0.8765y_2 + 1.1547y_3 = 1 \Rightarrow 1.1547y_3 = 1 \Rightarrow y_3 = 0.8660$. Next
+	we take $L^tx=y$ and solve for $x$.
+	$$
+	\begin{bmatrix}
+		1.4142 & -0.7071 & 0 \\
+		0 & 1.2247 & -0.8165 \\
+		0 & 0 & 1.1547 \\
+	\end{bmatrix}x=
+	\begin{bmatrix}
+		1.4142 \\ 0 \\ 0.8660
+	\end{bmatrix}
+	$$
+	We can solve for $x$ using backward substitution. $1.1547x_3 = 0.8660 \Rightarrow x_3 = 0.75$,
+	$1.2247x_2 - 0.8165x_3 = 0 \Rightarrow 1.2247x_2 - 0.6124 = 0 \Rightarrow 1.2247x_2 = 0.6124 \Rightarrow
+	x_2 = 0.5$, $1.4142x_1 - 0.7071x_2 = 1.4142 \Rightarrow 1.4142x_1 - 0.3535 = 1.4142 \Rightarrow
+	1.4142x_1 = 1.7677 \Rightarrow x_1 = 1.25$. Therefore\ldots
+	$$
+	\begin{bmatrix}
+		x_1 \\ x_2 \\ x_3
+	\end{bmatrix} = 
+	\begin{bmatrix}
+		1.25 \\ 0.5 \\ 0.75
+	\end{bmatrix}
+	$$
+	This is the same result we obtained in part (a), further substituting these values
+	into the original equation does in fact prove to be a valid solution.
+
+	%% Answer should be [1.25, 0.5, 0.75]
 
 \end{document}
